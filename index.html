@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- icon fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/cf76925589.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS (Animate On Scrool) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- logo tab -->
+    <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon" />
+
+    <!--style-->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- <link rel="stylesheet" href="CSS/footer.css"> -->
+    <title>Coffee.in Home Page</title>
+  </head>
+
+  <body>
+    <!--NAVIGATION-->
+    <header class="navigationn">
+      <img class="logo" src="assets/logoo.png" alt="logo" />
+
+      <nav class="navbar-menu">
+        <a href="index.html" class="btn-active">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="outlets.html">Outlets</a>
+      </nav>
+
+        <div class="btn-navbar">
+            <a href="login_register.html">
+                <button class="login" type="button">
+                    <i class="fas fa-user"></i> Account
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Video -->
+    <section class="video_opening">
+      <video autoplay loop>
+        <source src="assets/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+        <div class="row">
+            <div class="about-img" data-aos="fade-down-right" data-aos-duration="5000">
+                <img src="assets/Home_About.png" alt="About Us" />
+            </div>
+            <div class="content">
+                <h3 data-aos="fade-down-left" data-aos-duration="5000">Hello Customer</h3>
+                <p data-aos="fade-up-left" data-aos-duration="5000">
+                    Welcome to coffee.in, where every cup tells a story. Our journey
+                    began with a simple idea: to create a space where people could
+                    escape the hustle of everyday life and savor the finest flavors of
+                    meticulously crafted coffee
+                </p>
+                <a href="about-us.html">Learn More>></a>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section end -->
+
+    <!--FEATURE-->
+    <section>
+        <h2 class="tittle-con">Why should Coffee.in?</h2> <br> <br>
+        <div class="container2">
+
+            <div class="row">
+                <div class="col">
+                    <span>
+                        <img src="assets/best_quality_coffe.png" alt="bestPrice" class="icon-quality-coffee">
+                    </span>
+                    <p class="feature-ttl"><b>Best Quality Coffee</b></p>
+                    <p class="feature-desc">We offer an unmatched coffee experience with the best quality 
+                        coffee beans from various parts of the world. Our coffee is carefully selected, 
+                        meticulously roasted and served with passion. Every cup of coffee that you enjoy 
+                        in our coffee shop is the result of a carefully controlled process, which guarantees 
+                        a deep and satisfying taste and aroma.</p>
+                </div>
+
+                <div class="col">
+                    <span>
+                        <img src="assets/icon-varied-menu.webp" alt="Varied_menu" class="icon-varied-menu">
+                    </span>
+                    <p class="feature-ttl"><b>Varied Menu</b></p>
+                    <p class="feature-desc">Do you enjoy classic coffee, full of traditional flavors, 
+                        or prefer a strong espresso drink? Or perhaps you prefer to explore the wide 
+                        variety of delicious coffee drinks? At our coffee shop, we understand the diverse 
+                        tastes of our customers. We have three main categories of coffee, namely hot, cold 
+                        and powder, which cover various types of coffee drinks. We are committed to providing 
+                        a variety of choices to satisfy your every taste, so that your every visit is a unique 
+                        experience at our coffee shop.</p>
+                </div>
+
+                <div class="col">
+                    <span>
+                        <img src="assets/icon-barista.png" alt="Expertise_Barista" class="icon-expertise-barista">
+                    </span>
+                    <p class="feature-ttl"><b>Expertise Barista</b></p>
+                    <p class="feature-desc">We have an impressive team of baristas with unrivaled skills. 
+                        They have gone through in-depth training and experience in the art of coffee, 
+                        producing coffee drinks that are of the highest quality in every cup. With their 
+                        skills, you can be sure that your every visit will be a special coffee experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>

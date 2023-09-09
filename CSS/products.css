@@ -1,0 +1,159 @@
+/*home manual button next*/
+.slide img {
+    width: 100%;
+    height: fit-content;
+    padding-top: 60px;
+}
+
+.manual-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prev-button{
+    left: 10px;
+}
+
+.next-button{
+    right: 10px;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #a19f9f;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #ddd;
+}
+
+/* cart */
+#cart{
+    position: absolute;
+    top: 10;
+    right: 55px;
+    text-decoration: none;
+    color: #1E463B;
+    padding: 10px;
+    border: 1px solid #224b3c;
+    border-radius: 20px;
+    z-index: 800;
+    transition: 1s;
+}
+
+#cart:hover{
+    background-color: #1E463B;
+    color: white;
+    border: #a6f5e1;
+}
+
+/*products*/
+.products {
+    padding: 30px;
+    text-align: center;
+}
+
+/* category */
+.categories-container a {
+    padding: 30px;
+    padding-bottom: 10px;
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.1s, border-bottom 0.1s; 
+}
+
+.categories-container a:hover {
+    color: #246326; 
+    border-bottom: 2px solid #246326; 
+    font-weight: bold;
+}
+
+.categories-container a.active {
+    color: #246326;
+    border-bottom: 2px solid #246326;
+    font-weight: bold;
+}
+
+/* menu */
+/* Style untuk container menu */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Style untuk setiap item menu */
+.menu-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #CDDDD7;
+}
+
+.menu-item h2 {
+    color: #1E463B;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 5px 0;
+}
+
+.menu-item p {
+    color: #1E463B;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding-top: 2px;
+    margin: 5px 0;
+}
+
+/* Style untuk gambar produk */
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style untuk tombol "Add to Cart" */
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 218px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #1E463B;
+    font-family: 'Poppins';
+}
+
+.add-to-cart-button:hover{
+    background-color: #299c80;
+}
+
+button i{
+    padding-right: 8px;
+}

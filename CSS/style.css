@@ -1,0 +1,277 @@
+:root {
+  --primary: #1e463b;
+  --secondary: #3c806d;
+  --muda: #e2ede9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", "sans-Serif";
+  background-color: var(--muda);
+  color: var(--primary);
+}
+
+/*navbar*/
+.logo {
+  width: 130px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.navigationn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-right: 40px;
+  background-color: var(--primary);
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.navbar-menu {
+  color: var(--muda);
+}
+
+.navbar-menu a {
+  color: #e2ede9;
+  padding: 15px;
+  font-weight: 500;
+}
+
+.navbar-menu a:hover {
+  color: #2ccea0;
+}
+
+.navbar-menu a.btn-active {
+  color: #45f5b4;
+}
+
+.login {
+  background-color: #4af3b5;
+  border: 1px solid #4af3b5;
+  border-radius: 5px;
+  color: var(--primary);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Poppins";
+  z-index: 10000;
+}
+
+.login:hover {
+  background-color: #37a77d;
+  color: var(--muda);
+  z-index: 10000;
+}
+
+.login i {
+  padding-right: 5px;
+  z-index: 10000;
+}
+
+/* Video */
+.video_opening {
+  width: 100%;
+  height: 100vh;
+  padding-top: 69px;
+}
+
+.video_opening video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* home about us */
+.about-us {
+  padding: 90px;
+}
+
+.about,
+.menu,
+.products,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.products h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.products h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 80%;
+  margin-top: 12px;
+}
+
+.about .row .content {
+  flex: 1 1 40rem;
+  padding: 50px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.about .row .content h3 {
+  font-size: 70px;
+  font-weight: 500;
+  color: #1e463b;
+  margin: 2rem 0;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+}
+.Learn-More {
+  text-decoration: none;
+  color: #20c070;
+}
+/* Our Founder Section */
+.team h2 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.6rem;
+}
+.team p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.team .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.team .row .team-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.team .row .team-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.team .row .team-card .team-card-title {
+  margin: 1rem auto 0.5rem;
+}
+/*products*/
+.products {
+  padding: 90px;
+}
+
+/*customers*/
+.customers {
+  padding: 90px;
+}
+
+/* why should coffe.in */
+
+.tittle-con {
+  font-family: "Poppins";
+  font-size: 50px;
+  font-weight: 500;
+  color: #1e463b;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.container2 {
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: "Poppins";
+  color: #1e463b;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+}
+
+.icon-quality-coffee {
+  font-size: 40px;
+  margin-right: 10px;
+  width: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.icon-varied-menu {
+  font-size: 40px;
+  margin-right: 10px;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.icon-expertise-barista {
+  font-size: 40px;
+  margin-right: 10px;
+  width: 90px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.feature-ttl {
+  font-family: "Poppins";
+  color: #1e463b;
+  font-size: 20px;
+}
+
+.feature-desc {
+  font-family: "Poppins";
+  color: #1e463b;
+  font-size: 13px;
+}
