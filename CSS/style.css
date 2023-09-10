@@ -50,6 +50,8 @@ body {
 
 .navbar-menu a:hover {
   color: #2ccea0;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .navbar-menu a.btn-active {
@@ -97,6 +99,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 
 /* home about us */
 .about-us {
@@ -160,10 +163,18 @@ body {
   line-height: 1.6;
   text-align: center;
 }
-.Learn-More {
+
+.about .row .content a{
   text-decoration: none;
-  color: #20c070;
+  color: #457c6d;
+  font-weight: bold;
 }
+
+.about .row .content a:hover{
+  color: #236352;
+  font-size: 20px;
+}
+
 /* Our Founder Section */
 .team h2 {
   margin-bottom: 1rem;
@@ -199,79 +210,60 @@ body {
 .team .row .team-card .team-card-title {
   margin: 1rem auto 0.5rem;
 }
-/*products*/
-.products {
-  padding: 90px;
+
+/* SUPERIORITY */
+.superiority{
+  margin: 50px;
+  padding: 10px;
 }
 
-/*customers*/
-.customers {
-  padding: 90px;
-}
-
-/* why should coffe.in */
-
-.tittle-con {
-  font-family: "Poppins";
-  font-size: 50px;
-  font-weight: 500;
-  color: #1e463b;
+.container {
   text-align: center;
-  margin-top: 80px;
+  font-size: 24px;
+  position: relative;
+  padding: 20px 0;
 }
 
-.container2 {
-  max-width: 1010px;
-  margin: 0 auto;
-  padding: 30px;
-  font-family: "Poppins";
-  color: #1e463b;
-  font-size: 20px;
+.line {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #1e463b;
 }
 
-.row {
+.line-left {
+  left: 0;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+.line-right {
+  right: 0;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+.text{
+  font-size: 50px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  text-align: center;
+}
+
+.container-superiority {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
 }
-
-.col {
-  flex: 1;
+.point {
+  width: 18%;
   text-align: center;
+  margin: 0 1%;
 }
-
-.icon-quality-coffee {
-  font-size: 40px;
-  margin-right: 10px;
-  width: 80px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.icon-varied-menu {
-  font-size: 40px;
-  margin-right: 10px;
-  width: 150px;
-  margin-bottom: 5px;
-  margin-top: 10px;
-}
-
-.icon-expertise-barista {
-  font-size: 40px;
-  margin-right: 10px;
-  width: 90px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.feature-ttl {
-  font-family: "Poppins";
-  color: #1e463b;
+.point h2 {
   font-size: 20px;
+  margin-bottom: 10px;
 }
-
-.feature-desc {
-  font-family: "Poppins";
-  color: #1e463b;
-  font-size: 13px;
+.point p {
+  font-size: 14px;
+  line-height: 1.5;
 }
