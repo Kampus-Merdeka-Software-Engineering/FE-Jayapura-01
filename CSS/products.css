@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /*home manual button next*/
 .slide img {
     width: 100%;
@@ -157,3 +161,8 @@
 button i{
     padding-right: 8px;
 }
+
+/* responsive */
+
+
+
