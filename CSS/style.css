@@ -100,7 +100,6 @@ body {
   height: 100%;
 }
 
-
 /* home about us */
 .about-us {
   padding: 90px;
@@ -136,9 +135,15 @@ body {
 .about .row .about-img {
   flex: 1 1 45rem;
 }
-
 .about .row .about-img img {
   width: 80%;
+  margin-top: 12px;
+}
+.about .row .about-img-kedua {
+  flex: 1 1 45rem;
+}
+.about-img-kedua img {
+  width: 90%;
   margin-top: 12px;
 }
 
@@ -163,14 +168,33 @@ body {
   line-height: 1.6;
   text-align: center;
 }
+.about .row .content-kedua {
+  flex: 1 1 40rem;
+  padding: 50px;
+  padding-top: 0px;
+}
 
-.about .row .content a{
+.about .row .content-kedua h3 {
+  font-size: 45px;
+  font-weight: 500;
+  color: #1e463b;
+  margin: 2rem, 0;
+  padding-top: 50px;
+}
+
+.about .row .content-kedua p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.about .row .content a {
   text-decoration: none;
   color: #457c6d;
   font-weight: bold;
 }
 
-.about .row .content a:hover{
+.about .row .content a:hover {
   color: #236352;
   font-size: 20px;
 }
@@ -186,7 +210,7 @@ body {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -212,7 +236,7 @@ body {
 }
 
 /* SUPERIORITY */
-.superiority{
+.superiority {
   margin: 50px;
   padding: 10px;
 }
@@ -243,9 +267,9 @@ body {
   width: 30%;
 }
 
-.text{
+.text {
   font-size: 50px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 300;
   text-align: center;
 }
