@@ -42,25 +42,111 @@ html {
     background-color: #ddd;
 }
 
-/* cart */
-#cart{
-    position: absolute;
-    top: 10;
-    right: 55px;
-    text-decoration: none;
-    color: #1E463B;
-    padding: 10px;
-    border: 1px solid #224b3c;
-    border-radius: 20px;
-    z-index: 800;
-    transition: 1s;
+/* ======================== */
+/* shopping cart start*/
+/* ======================== */
+.shopping {
+    position: relative;
+    text-align: right;
 }
 
-#cart:hover{
-    background-color: #1E463B;
-    color: white;
-    border: #a6f5e1;
+.shopping h1{
+    font-size: 30px;
+    text-align: center;
 }
+
+.shopping img{
+    margin-right: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.shopping span{
+    width: 20px; 
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    right: 33px;
+    top: 95px;
+    font-size: 10px;
+    padding: 1px;
+}
+
+.card{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #add6cb;
+    border-left: 2px solid #153a30;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.card h1{
+    color: var(--primary);
+    margin: 0;
+    padding-top: 90px;
+    padding-left: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.card .checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.card .checkout div{
+    background-color: #266951;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    color: #add6cb;
+}
+
+.card .checkout div:nth-child(2){
+    background-color: #12201d;
+    color: var(--muda);
+    font-weight: 300;
+}
+
+.active .card{
+    left: calc(100% - 500px);
+}
+
+.active .container-shopping{
+    transform: translateX(-200px);
+}
+
+.checkout .closeShopping{
+    border: 2px solid #153a30;
+    
+}
+
+.checkout .total{
+    border-top: 2px solid #153a30;
+
+}
+
+/* ================== */
+/* shopping cart end */
+/* ================== */
 
 /*products*/
 .products {
@@ -162,7 +248,27 @@ button i{
     padding-right: 8px;
 }
 
-/* responsive */
+/* angka shopping cart */
+/* CSS for Cart Item Count */
+#cart {
+    position: relative;
+}
+
+#cart-item-count {
+    position: absolute;
+    top: 5px; /* Adjust the vertical position as needed to make it closer to the top */
+    right: 5px; /* Adjust the horizontal position as needed to make it closer to the right */
+    background-color: #ff5733; /* Background color of the count badge (red) */
+    color: white; /* Text color of the count badge (white) */
+    font-size: 12px; /* Font size of the count badge */
+    width: 20px; /* Width of the count badge */
+    height: 20px; /* Height of the count badge */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 

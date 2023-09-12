@@ -13,6 +13,10 @@
     <!-- icon fontawesome-->
     <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
 
+    <!-- Box icon -->
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <!-- logo tab -->
     <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
 
@@ -20,10 +24,10 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/products.css">
     <title>Coffee.in Products</title>
+    
 </head>
 
 <body>
-
     <!--NAVIGATION-->
     <header class="navigationn">
         <img class=logo src="assets/logoo.png" alt="logo">
@@ -72,11 +76,33 @@
 
     <!-- content -->
     <section class="products">
+        <!-- ================== -->
+        <!-- shopping cart start -->
+        <!-- ================== -->
+        <div class="container-shoppping">
+            <!-- icon cart -->
+            <div class="shopping">
+                <h1>OUR MENUS</h1> <br> <br>
+                <img src="assets/shopping-cart.svg " alt="cart">
+                <span class="quantity">0</span>
+            </div>
+            <div class="list"></div>
+        </div>
 
-        <a href="checkout.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
+        <!-- shopping cart -->
+        <div class="card">
+            <h1>Shopping Cart</h1>
+            <ul class="listCard"></ul>
+            <div class="checkout">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+        <!-- ================== -->
+        <!-- shopping cart end -->
+        <!-- ================== -->
 
         <div class="categories-container">
-            <h1>OUR MENUS</h1> <br> <br>
             <a href="" class="category-option active" data-filter="all">ALL</a>
             <a href="" class="category-option" data-filter="hot">HOT COFFEE</a>
             <a href="" class="category-option" data-filter="cold">COLD COFFEE</a>
@@ -87,7 +113,7 @@
         <!-- menu -->
         <div class="menu-container">
             <!-- HOT -->
-            <div class="menu-item" data-category="hot" >
+            <div class="menu-item" data-category="hot">
                 <img src="assets/1.hot_Hot_Matcha_Latte.jpg" alt="hot 1">
                 <h2>Hot Matcha Latte</h2>
                 <p>Rp. 39.000</p>
@@ -180,7 +206,7 @@
                 <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
             </div>
 
-            <div class="menu-item" data-category="cold" >
+            <div class="menu-item" data-category="cold">
                 <img src="assets/2.cold_Pisvocado_Frappucino.png" alt="cold 2">
                 <h2>Pisvocado Frappucino</h2>
                 <p>Rp. 30.000</p>
@@ -345,6 +371,7 @@
 
         <script src="JS/script.js"></script>
         <script src="JS/products.js"></script>
+
 </body>
 
 </html>
