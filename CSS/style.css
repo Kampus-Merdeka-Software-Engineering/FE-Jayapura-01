@@ -104,26 +104,17 @@ body {
   padding: 90px;
 }
 
-.about,
-.menu,
-.products,
-.contact {
+.about {
   padding: 8rem 7% 1.4rem;
 }
 
-.about h2,
-.menu h2,
-.products h2,
-.contact h2 {
+.about h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.menu h2 span,
-.products h2 span,
-.contact h2 span {
+.about h2 span {
   color: var(--primary);
 }
 
@@ -183,6 +174,7 @@ body {
   color: #1e463b;
   margin: 2rem, 0;
   padding-top: 50px;
+  text-align: center;
 }
 
 .about .row .content-kedua p {
@@ -190,6 +182,7 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about .row .content a {
@@ -405,3 +398,74 @@ ul {
 }
 
 /* CSS Footer End */
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-item {
+    flex: 0 0 calc(33.33% - 20px); /* Mengatur lebar item menu */
+    margin: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .about-img-kedua img {
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+  .menu-container {
+    flex-direction: column; /* Susunan kolom untuk tampilan mobile */
+  }
+
+  .menu-item {
+    flex: 0 0 100%; /* Item menu mengambil seluruh lebar layar */
+    margin: 10px 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
