@@ -49,7 +49,6 @@ body {
 }
 
 .navbar-menu a:hover {
-  color: #2ccea0;
   font-size: 18px;
   font-weight: 400;
 }
@@ -195,8 +194,7 @@ body {
 }
 
 .about .row .content a:hover {
-  color: #236352;
-  font-size: 20px;
+  color: #19d4a5ab;
 }
 
 /* Our Founder Section */
@@ -283,10 +281,17 @@ body {
   text-align: center;
   margin: 0 1%;
 }
+.point i{
+  color: #1e463b;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
 .point h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .point p {
   font-size: 14px;
   line-height: 1.5;
