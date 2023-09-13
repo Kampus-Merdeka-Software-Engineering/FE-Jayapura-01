@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         quantity.textContent = cartQuantity;
     }
 
-    // Contoh penggunaan addToCart
+    // addToCart
     document.querySelectorAll('.add-to-cart-button').forEach(button => {
         button.addEventListener('click', () => {
             // Ambil nama, harga, dan URL gambar dari elemen yang sesuai
