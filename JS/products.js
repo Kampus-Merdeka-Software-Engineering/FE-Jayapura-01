@@ -28,61 +28,61 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-    // shopping cart
-    let openShopping = document.querySelector('.shopping');
-    let closeShopping = document.querySelector('.closeShopping');
-    let listCard = document.querySelector('.listCard');
-    let body = document.body;
-    let total = document.querySelector('.total');
-    let quantity = document.querySelector('.quantity');
+// shopping cart
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let listCard = document.querySelector('.listCard');
+let body = document.body;
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
 
-    // Inisialisasi total dan quantity awal
-    let cartTotal = 0;
-    let cartQuantity = 0;
+// Inisialisasi total dan quantity awal
+let cartTotal = 0;
+let cartQuantity = 0;
 
-    openShopping.addEventListener('click', () => {
-        body.classList.add('active');
+openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+});
+
+closeShopping.addEventListener('click', () => {
+    body.classList.remove('active');
+});
+
+// Function untuk menambah item ke keranjang
+function addToCart(itemName, itemPrice, itemImageSrc) {
+    // Membuat elemen <li> untuk item yang ditambahkan ke keranjang
+    let listItem = document.createElement('li');
+
+    // Membuat elemen gambar untuk menampilkan gambar item
+    let itemImage = document.createElement('img');
+    itemImage.src = itemImageSrc; // Mengatur URL gambar
+
+    // Menambahkan item ke dalam elemen <li>
+    listItem.appendChild(itemImage); // Menambahkan gambar ke dalam elemen <li>
+    listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(3)}`;
+
+    // Menambahkan item ke keranjang
+    listCard.appendChild(listItem);
+
+    // Menghitung total dan quantity
+    cartTotal += itemPrice;
+    cartQuantity++;
+
+    // Memperbarui tampilan total dan quantity
+    total.textContent = `Rp. ${cartTotal.toFixed(3)}`;
+    quantity.textContent = cartQuantity;
+}
+
+// addToCart
+document.querySelectorAll('.add-to-cart-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Ambil nama, harga, dan URL gambar dari elemen yang sesuai
+        let itemName = button.parentElement.querySelector('h2').textContent;
+        let itemPrice = parseFloat(button.parentElement.querySelector('p').textContent.replace('Rp. ', ''));
+        let itemImageSrc = button.parentElement.querySelector('img').src; // Ambil URL gambar
+        console.log(itemImageSrc);
+
+        // Panggil fungsi addToCart untuk menambahkan item ke keranjang
+        addToCart(itemName, itemPrice, itemImageSrc);
     });
-
-    closeShopping.addEventListener('click', () => {
-        body.classList.remove('active');
-    });
-
-    // Function untuk menambah item ke keranjang
-    function addToCart(itemName, itemPrice, itemImageSrc) {
-        // Membuat elemen <li> untuk item yang ditambahkan ke keranjang
-        let listItem = document.createElement('li');
-
-        // Membuat elemen gambar untuk menampilkan gambar item
-        let itemImage = document.createElement('img');
-        itemImage.src = itemImageSrc; // Mengatur URL gambar
-
-        // Menambahkan item ke dalam elemen <li>
-        listItem.appendChild(itemImage); // Menambahkan gambar ke dalam elemen <li>
-        listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(2)}`;
-
-        // Menambahkan item ke keranjang
-        listCard.appendChild(listItem);
-
-        // Menghitung total dan quantity
-        cartTotal += itemPrice;
-        cartQuantity++;
-
-        // Memperbarui tampilan total dan quantity
-        total.textContent = `Rp. ${cartTotal.toFixed(2)}`;
-        quantity.textContent = cartQuantity;
-    }
-
-    // addToCart
-    document.querySelectorAll('.add-to-cart-button').forEach(button => {
-        button.addEventListener('click', () => {
-            // Ambil nama, harga, dan URL gambar dari elemen yang sesuai
-            let itemName = button.parentElement.querySelector('h2').textContent;
-            let itemPrice = parseFloat(button.parentElement.querySelector('p').textContent.replace('Rp. ', ''));
-            let itemImageSrc = button.parentElement.querySelector('img').src; // Ambil URL gambar
-            console.log(itemImageSrc);
-
-            // Panggil fungsi addToCart untuk menambahkan item ke keranjang
-            addToCart(itemName, itemPrice, itemImageSrc);
-        });
-    });
+});
