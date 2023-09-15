@@ -100,7 +100,6 @@
 .timeline__img {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
 .timeline__content h2 {
   font-weight: normal;
@@ -140,9 +139,7 @@
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
 }
 .right::before {
   content: "";
@@ -152,9 +149,7 @@
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent white transparent transparent;
 }
 .right::after {
   left: -13px;
