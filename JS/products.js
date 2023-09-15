@@ -58,8 +58,8 @@ function addToCart(itemName, itemPrice, itemImageSrc) {
     itemImage.src = itemImageSrc; // Mengatur URL gambar
 
     // Menambahkan item ke dalam elemen <li>
-    listItem.appendChild(itemImage); // Menambahkan gambar ke dalam elemen <li>
     listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(3)}`;
+    listItem.insertBefore(itemImage, listItem.firstChild);
 
     // Menambahkan item ke keranjang
     listCard.appendChild(listItem);
@@ -79,7 +79,7 @@ document.querySelectorAll('.add-to-cart-button').forEach(button => {
         // Ambil nama, harga, dan URL gambar dari elemen yang sesuai
         let itemName = button.parentElement.querySelector('h2').textContent;
         let itemPrice = parseFloat(button.parentElement.querySelector('p').textContent.replace('Rp. ', ''));
-        let itemImageSrc = button.parentElement.querySelector('img').src; // Ambil URL gambar
+        let itemImageSrc = button.parentElement.dataset.imageSrc; // Mengambil URL gambar dari atribut data-image-src
         console.log(itemImageSrc);
 
         // Panggil fungsi addToCart untuk menambahkan item ke keranjang
