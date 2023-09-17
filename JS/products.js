@@ -106,7 +106,7 @@ closeShoppingCart.addEventListener('click', (event) => {
 const categoryOptions = document.querySelectorAll('.category-option');
 
 function filterProducts(category) {
-    const menuItems = document.querySelectorAll('.menu-item');
+    const menuItems = document.querySelectorAll('.menu-items');
     
     menuItems.forEach((menuItem) => {
         const productCategory = menuItem.dataset.category;
