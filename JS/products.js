@@ -28,61 +28,106 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// shopping cart
-let openShopping = document.querySelector('.shopping');
-let closeShopping = document.querySelector('.closeShopping');
-let listCard = document.querySelector('.listCard');
-let body = document.body;
-let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
 
-// Inisialisasi total dan quantity awal
+//fetching json
+
+fetch('assets/products.json')
+    .then((response) => response.json())
+    .then((data) => {
+        // Loop melalui data produk dan tambahkan setiap produk ke dalam DOM
+        data.products.forEach((product) => {
+            addProductToDOM(product);
+        });
+    });
+
+//looping product to html structures
+
+function addProductToDOM(product) {
+    const menuItems = document.querySelector('.menu-item'); // Ganti dengan elemen HTML tempat menampilkan produk
+
+    // Buat elemen div untuk menampilkan produk
+    const productDiv = document.createElement('div');
+    productDiv.className = 'menu-item';
+    productDiv.dataset.category = product.category;
+
+    // Buat elemen gambar
+    const img = document.createElement('img');
+    img.src = product.imageSrc;
+    img.alt = product.name;
+
+    // Buat elemen judul produk
+    const h2 = document.createElement('h2');
+    h2.textContent = product.name;
+
+    // Buat elemen harga produk
+    const p = document.createElement('p');
+    p.textContent = `Rp. ${parseFloat(product.price)}`;
+
+    const button = document.createElement('button');
+    button.className = 'add-to-cart-button';
+    button.innerHTML = '<i class="fa-solid fa-cart-plus"></i>Add to Cart';
+
+    productDiv.appendChild(img);
+    productDiv.appendChild(h2);
+    productDiv.appendChild(p);
+    productDiv.appendChild(button);
+
+    menuItems.appendChild(productDiv);
+}
+
+//Logika shopping  cart
+
 let cartTotal = 0;
 let cartQuantity = 0;
 
-openShopping.addEventListener('click', () => {
-    body.classList.add('active');
-});
+const list = document.querySelector('.card .list');
 
-closeShopping.addEventListener('click', () => {
-    body.classList.remove('active');
-});
-
-// Function untuk menambah item ke keranjang
-function addToCart(itemName, itemPrice, itemImageSrc) {
-    // Membuat elemen <li> untuk item yang ditambahkan ke keranjang
+function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
     let listItem = document.createElement('li');
-
-    // Membuat elemen gambar untuk menampilkan gambar item
     let itemImage = document.createElement('img');
-    itemImage.src = itemImageSrc; // Mengatur URL gambar
+    itemImage.src = itemImageSrc;
 
-    // Menambahkan item ke dalam elemen <li>
     listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(3)}`;
-    listItem.insertBefore(itemImage, listItem.firstChild);
+    listItem.insertBefore(itemImage,listItem.firstChild);
 
-    // Menambahkan item ke keranjang
-    listCard.appendChild(listItem);
+    list.appendChild(listItem);
 
-    // Menghitung total dan quantity
     cartTotal += itemPrice;
     cartQuantity++;
 
-    // Memperbarui tampilan total dan quantity
-    total.textContent = `Rp. ${cartTotal.toFixed(3)}`;
-    quantity.textContent = cartQuantity;
+    document.querySelector('.total').textContent = `Rp. ${cartTotal.toFixed(3)}`;
+    document.querySelector('.quantity').textContent = cartQuantity;
 }
 
-// addToCart
-document.querySelectorAll('.add-to-cart-button').forEach(button => {
-    button.addEventListener('click', () => {
-        // Ambil nama, harga, dan URL gambar dari elemen yang sesuai
-        let itemName = button.parentElement.querySelector('h2').textContent;
-        let itemPrice = parseFloat(button.parentElement.querySelector('p').textContent.replace('Rp. ', ''));
-        let itemImageSrc = button.parentElement.dataset.imageSrc; // Mengambil URL gambar dari atribut data-image-src
-        console.log(itemImageSrc);
+//add event to button add-to-cart
 
-        // Panggil fungsi addToCart untuk menambahkan item ke keranjang
-        addToCart(itemName, itemPrice, itemImageSrc);
-    });
+document.querySelector('.menu-item').addEventListener('click', (event) => {
+    if (event.target.classList.contains('add-to-cart-button')) {
+      const productDiv = event.target.parentElement;
+      const productName = productDiv.querySelector('h2').textContent;
+      const productPriceText = productDiv.querySelector('p').innerText;
+      console.log(productPriceText);
+      const cleanedPriceText = productPriceText.replace('Rp. ', '').replace(',', '');   
+      const productPrice = parseFloat(cleanedPriceText);
+      console.log(productPrice);
+      const productImageSrc = productDiv.querySelector('img').src;
+        
+      
+      addToCartAndUpdate(productName, productPrice, productImageSrc);
+    }
+  });
+
+// Open and Close Shopping Cart
+const shoppingCart = document.querySelector('.shopping');
+const closeShoppingCart = document.querySelector('.closeShopping');
+const body = document.body;
+
+shoppingCart.addEventListener('click', () => {
+    body.classList.toggle('active');
+});
+
+closeShoppingCart.addEventListener('click', (event) => {
+    if (event.target.classList.contains('closeShopping')) {
+        body.classList.remove('active');
+    }
 });
