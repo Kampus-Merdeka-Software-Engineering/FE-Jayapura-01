@@ -1,36 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuItems = document.querySelectorAll(".category-option");
-    const coffeeItems = document.querySelectorAll(".menu-item");
-
-    menuItems.forEach((menuItem) => {
-        menuItem.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            // Hapus kelas "active" dari semua item menu
-            menuItems.forEach((item) => item.classList.remove("active"));
-            // Tambahkan kelas "active" hanya pada item menu yang diklik
-            this.classList.add("active");
-
-            // Dapatkan nilai data-filter dari item menu yang diklik
-            const filter = this.getAttribute("data-filter");
-
-            // Tampilkan atau sembunyikan item kopi berdasarkan filter
-            coffeeItems.forEach((coffeeItem) => {
-                const category = coffeeItem.getAttribute("data-category");
-                if (filter === "all" || filter === category) {
-                    coffeeItem.style.display = "block";
-                } else {
-                    coffeeItem.style.display = "none";
-                }
-            });
-        });
-    });
-});
-
-
-
 //fetching json
-
 fetch('assets/products.json')
     .then((response) => response.json())
     .then((data) => {
@@ -47,9 +15,9 @@ function addProductToDOM(product) {
 
     // Buat elemen div untuk menampilkan produk
     const productDiv = document.createElement('div');
-    productDiv.className = 'menu-item';
+    productDiv.className = 'menu-items';
     productDiv.dataset.category = product.category;
-
+    //console.log(product.category);
     // Buat elemen gambar
     const img = document.createElement('img');
     img.src = product.imageSrc;
@@ -130,4 +98,45 @@ closeShoppingCart.addEventListener('click', (event) => {
     if (event.target.classList.contains('closeShopping')) {
         body.classList.remove('active');
     }
+});
+
+
+// Fungsi untuk mengaktifkan filter berdasarkan kategori
+
+const categoryOptions = document.querySelectorAll('.category-option');
+
+function filterProducts(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    
+    menuItems.forEach((menuItem) => {
+        const productCategory = menuItem.dataset.category;
+        
+        console.log(productCategory);
+        if (category === 'all' || category === productCategory) {
+            console.log(productCategory);
+            menuItem.style.display = 'inline-block';
+        } else {
+            menuItem.style.display = 'none';
+        }
+    });
+}
+
+categoryOptions.forEach((option) => {
+    option.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        categoryOptions.forEach((opt) => {
+            opt.classList.remove('active');
+        });
+
+        // Tambahkan kelas "active" ke opsi kategori yang dipilih
+        option.classList.add('active');
+
+        // Ambil nilai data-category dari opsi kategori yang dipilih
+        const selectedCategory = option.dataset.category;
+       
+
+        // Panggil fungsi untuk mengaktifkan filter
+        filterProducts(selectedCategory);
+    });
 });
