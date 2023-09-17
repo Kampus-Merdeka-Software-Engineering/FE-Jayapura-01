@@ -150,6 +150,17 @@ html {
   border-top: 2px solid #153a30;
 }
 
+.card .list{
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.card .list img{
+  width: auto;
+  height: 10rem;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /* ================== */
 /* shopping cart end */
 /* ================== */
@@ -181,49 +192,30 @@ html {
   font-weight: bold;
 }
 
-/* menu */
-/* Style untuk container menu */
-.menu-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Style untuk setiap item menu */
 .menu-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  background: #cdddd7;
+  display: inline-block;
+  width: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5; 
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  margin: 10px; 
+  text-align: center; 
 }
-
-.menu-item h2 {
-  color: #1e463b;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-  margin: 5px 0;
-}
-
-.menu-item p {
-  color: #1e463b;
-  font-family: Poppins;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-  padding-top: 2px;
-  margin: 5px 0;
-}
-
-/* Style untuk gambar produk */
 .menu-item img {
   max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  height: 25rem;
+}
+.menu-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-item {
+    width: 100%; /* Setiap produk memenuhi lebar penuh pada layar kecil */
+    margin-right: 10pz;
+  }
 }
 
 /* Style untuk tombol "Add to Cart" */
