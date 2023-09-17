@@ -22,10 +22,10 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- AOS (Animate On Scrool) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
     <!-- logo tab -->
-    <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
 
     <!--style-->
     <link rel="stylesheet" href="CSS/style.css" />
@@ -39,10 +39,18 @@
         <img class="logo" src="assets/logoo.png" alt="logo" />
 
         <nav class="navbar-menu">
-            <a href="index.html" class="btn-active">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="stores.html">Stores</a>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="index.html" class="btn-active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="stores.html">Stores</a></li>
+            </ul>
         </nav>
 
         <div class="btn-navbar">
@@ -56,11 +64,12 @@
 
     <!-- Video -->
     <section class="video_opening">
-        <video autoplay loop>
-            <source src="assets/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-
+        <div class="video-wrapper">
+            <video autoplay loop>
+                <source src="assets/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
 
     <!-- About Section start -->

@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/*home manual button next*/
+/*manual button next*/
 .slide img {
   width: 100%;
   height: fit-content;
@@ -192,7 +192,6 @@ html {
   font-weight: bold;
 }
 
-/* Product Style */
 .menu-item {
   display: inline-block;
   width: auto;
@@ -247,7 +246,6 @@ button i {
   padding-right: 8px;
 }
 
-/* angka shopping cart */
 /* CSS for Cart Item Count */
 #cart {
   position: relative;
