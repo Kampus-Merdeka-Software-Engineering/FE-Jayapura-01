@@ -55,7 +55,8 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   let itemImage = document.createElement("img");
   itemImage.src = itemImageSrc;
 
-  listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(3)}`;
+
+  listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(0)}`;
   listItem.insertBefore(itemImage, listItem.firstChild);
 
   list.appendChild(listItem);
@@ -63,7 +64,7 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   cartTotal += itemPrice;
   cartQuantity++;
 
-  document.querySelector(".total").textContent = `Rp. ${cartTotal.toFixed(3)}`;
+  document.querySelector(".total").textContent = `Rp. ${cartTotal.toFixed(0)}`;
   document.querySelector(".quantity").textContent = cartQuantity;
 }
 
@@ -137,3 +138,7 @@ categoryOptions.forEach((option) => {
     filterProducts(selectedCategory);
   });
 });
+function redirectToPage() {
+  // Ganti URL halaman dengan URL tujuan Anda
+  window.location.href = "checkout.html";
+}
