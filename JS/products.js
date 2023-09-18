@@ -55,7 +55,7 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   let itemImage = document.createElement("img");
   itemImage.src = itemImageSrc;
 
-  listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(0)}`;
+  listItem.textContent = `${itemName} - Rp. ${itemPrice}`;
   listItem.insertBefore(itemImage, listItem.firstChild);
 
   list.appendChild(listItem);
@@ -63,7 +63,7 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   cartTotal += itemPrice;
   cartQuantity++;
 
-  document.querySelector(".total").textContent = `Rp. ${cartTotal.toFixed(0)}`;
+  document.querySelector(".total").textContent = `Rp. ${cartTotal}`;
   document.querySelector(".quantity").textContent = cartQuantity;
 }
 
