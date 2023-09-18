@@ -9,7 +9,6 @@ fetch("assets/products.json")
   });
 
 //looping product to html structures
-
 function addProductToDOM(product) {
   const menuItems = document.querySelector(".menu-item"); // Ganti dengan elemen HTML tempat menampilkan produk
 
@@ -17,15 +16,15 @@ function addProductToDOM(product) {
   const productDiv = document.createElement("div");
   productDiv.className = "menu-items";
   productDiv.dataset.category = product.category;
-  //console.log(product.category);
+
   // Buat elemen gambar
   const img = document.createElement("img");
   img.src = product.imageSrc;
   img.alt = product.name;
 
   // Buat elemen judul produk
-  const h2 = document.createElement("h2");
-  h2.textContent = product.name;
+  const h3 = document.createElement("h3");
+  h3.textContent = product.name;
 
   // Buat elemen harga produk
   const p = document.createElement("p");
@@ -36,15 +35,13 @@ function addProductToDOM(product) {
   button.innerHTML = '<i class="fa-solid fa-cart-plus"></i>Add to Cart';
 
   productDiv.appendChild(img);
-  productDiv.appendChild(h2);
+  productDiv.appendChild(h3);
   productDiv.appendChild(p);
   productDiv.appendChild(button);
-
   menuItems.appendChild(productDiv);
 }
 
 //Logika shopping  cart
-
 let cartTotal = 0;
 let cartQuantity = 0;
 
@@ -68,16 +65,13 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
 }
 
 //add event to button add-to-cart
-
 document.querySelector(".menu-item").addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart-button")) {
     const productDiv = event.target.parentElement;
-    const productName = productDiv.querySelector("h2").textContent;
+    const productName = productDiv.querySelector("h3").textContent;
     const productPriceText = productDiv.querySelector("p").innerText;
     console.log(productPriceText);
-    const cleanedPriceText = productPriceText
-      .replace("Rp. ", "")
-      .replace(",", "");
+    const cleanedPriceText = productPriceText.replace("Rp. ", "").replace(",", "");
     const productPrice = parseFloat(cleanedPriceText);
     console.log(productPrice);
     const productImageSrc = productDiv.querySelector("img").src;
@@ -87,7 +81,7 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
 });
 
 // Open and Close Shopping Cart
-const shoppingCart = document.querySelector(".shopping");
+const shoppingCart = document.querySelector(".shopping img");
 const closeShoppingCart = document.querySelector(".closeShopping");
 const body = document.body;
 
@@ -102,7 +96,6 @@ closeShoppingCart.addEventListener("click", (event) => {
 });
 
 // Fungsi untuk mengaktifkan filter berdasarkan kategori
-
 const categoryOptions = document.querySelectorAll(".category-option");
 
 function filterProducts(category) {
@@ -139,7 +132,8 @@ categoryOptions.forEach((option) => {
     filterProducts(selectedCategory);
   });
 });
+
+// berpindah halaman ke checkout.html
 function redirectToPage() {
-  // Ganti URL halaman dengan URL tujuan Anda
   window.location.href = "checkout.html";
 }
