@@ -38,7 +38,6 @@ function addProductToDOM(product) {
   productDiv.appendChild(h3);
   productDiv.appendChild(p);
   productDiv.appendChild(button);
-
   menuItems.appendChild(productDiv);
 }
 
@@ -97,7 +96,6 @@ closeShoppingCart.addEventListener("click", (event) => {
 });
 
 // Fungsi untuk mengaktifkan filter berdasarkan kategori
-
 const categoryOptions = document.querySelectorAll(".category-option");
 
 function filterProducts(category) {
@@ -137,6 +135,5 @@ categoryOptions.forEach((option) => {
 
 // berpindah halaman ke checkout.html
 function redirectToPage() {
-  // Ganti URL halaman dengan URL tujuan Anda
   window.location.href = "checkout.html";
 }
