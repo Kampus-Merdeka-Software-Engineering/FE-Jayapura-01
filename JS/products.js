@@ -24,8 +24,8 @@ function addProductToDOM(product) {
   img.alt = product.name;
 
   // Buat elemen judul produk
-  const h2 = document.createElement("h2");
-  h2.textContent = product.name;
+  const h3 = document.createElement("h3");
+  h3.textContent = product.name;
 
   // Buat elemen harga produk
   const p = document.createElement("p");
@@ -36,7 +36,7 @@ function addProductToDOM(product) {
   button.innerHTML = '<i class="fa-solid fa-cart-plus"></i>Add to Cart';
 
   productDiv.appendChild(img);
-  productDiv.appendChild(h2);
+  productDiv.appendChild(h3);
   productDiv.appendChild(p);
   productDiv.appendChild(button);
 
@@ -55,6 +55,7 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   let itemImage = document.createElement("img");
   itemImage.src = itemImageSrc;
 
+
   listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(0)}`;
   listItem.insertBefore(itemImage, listItem.firstChild);
 
@@ -72,12 +73,10 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
 document.querySelector(".menu-item").addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart-button")) {
     const productDiv = event.target.parentElement;
-    const productName = productDiv.querySelector("h2").textContent;
+    const productName = productDiv.querySelector("h3").textContent;
     const productPriceText = productDiv.querySelector("p").innerText;
     console.log(productPriceText);
-    const cleanedPriceText = productPriceText
-      .replace("Rp. ", "")
-      .replace(",", "");
+    const cleanedPriceText = productPriceText.replace("Rp. ", "").replace(",", "");
     const productPrice = parseFloat(cleanedPriceText);
     console.log(productPrice);
     const productImageSrc = productDiv.querySelector("img").src;
@@ -87,7 +86,7 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
 });
 
 // Open and Close Shopping Cart
-const shoppingCart = document.querySelector(".shopping");
+const shoppingCart = document.querySelector(".shopping img");
 const closeShoppingCart = document.querySelector(".closeShopping");
 const body = document.body;
 
