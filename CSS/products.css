@@ -16,10 +16,14 @@ html {
 
 .prev-button {
   left: 10px;
+  position: fixed;
+  z-index: 500;
 }
 
 .next-button {
   right: 10px;
+  position: fixed;
+  z-index: 500;
 }
 
 .prev-button,
@@ -86,6 +90,7 @@ html {
   border-left: 2px solid #153a30;
   height: 100vh;
   transition: 0.5s;
+  z-index: 9999;
 }
 
 .list {
