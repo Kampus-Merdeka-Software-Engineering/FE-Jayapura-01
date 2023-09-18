@@ -15,7 +15,7 @@
     {
       "category": "hot",
       "imageSrc": "assets/Products/hot_Shakerato_Italian_Coffe.jpg",
-      "name": "Shakerato Italian Coffee",
+      "name": "Shakerato Coffee",
       "price": 45000
     },
     {
@@ -99,7 +99,7 @@
     {
       "category": "cold",
       "imageSrc": "assets/Products/cold_Iced_Peppermint_Mocha.png",
-      "name": "Iced Peppermint Mocha",
+      "name": "Pappermint Mocha",
       "price": 48000
     },
     {
@@ -135,7 +135,7 @@
     {
       "category": "cold",
       "imageSrc": "assets/Products/cold_Black Sesame Frappucino.png",
-      "name": "Black Sesame Frappucino",
+      "name": "Black Sesame",
       "price": 40000
     },
     {
