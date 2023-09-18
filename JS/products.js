@@ -16,7 +16,7 @@ function addProductToDOM(product) {
   const productDiv = document.createElement("div");
   productDiv.className = "menu-items";
   productDiv.dataset.category = product.category;
-  //console.log(product.category);
+
   // Buat elemen gambar
   const img = document.createElement("img");
   img.src = product.imageSrc;
