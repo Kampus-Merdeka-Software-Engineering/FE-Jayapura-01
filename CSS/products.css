@@ -203,7 +203,7 @@ html {
 /* Product Style */
 .menu-items {
   display: inline-block;
-  width: 275px;
+  width: 250px;
   margin-left: 10px;
   margin-right: 5px;
   margin-bottom: 10px;
@@ -252,9 +252,9 @@ html {
   font-family: "Poppins";
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
   .menu-items {
-    width: 170px; /* Setiap produk memenuhi lebar penuh pada layar kecil */
+    width: 160px; /* Setiap produk memenuhi lebar penuh pada layar kecil */
     margin: 3px;
     padding: 5px;
   }
