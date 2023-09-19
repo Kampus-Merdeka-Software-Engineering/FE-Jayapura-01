@@ -489,9 +489,96 @@ ul {
 /* ==================== */
 /* RESPONSIVE FOOTER */
 /* ==================== */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
+  .about .row {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
+  }
+
+  .about .row .about-img {
+    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+  }
+
+  .about .row .about-img-kedua {
+    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+  }
+
+  .about .row .content {
+    flex: 1 1 100%; /* Konten teks mengambil seluruh lebar kontainer */
+    padding: 20px; /* Mengurangi padding */
+  }
+
+  .about .row .content-kedua {
+    flex: 1 1 100%; /* Konten teks mengambil seluruh lebar kontainer */
+    padding: 20px; /* Mengurangi padding */
+  }
+
+  .about .row .content h3 {
+    font-size: 55px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .about .row .content-kedua h3 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .about .row .content p {
+    font-size: 35px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Tambahan: Atur gambar agar selalu berada di tengah (horizontal) */
+.about-img-kedua img {
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 450px) {
+  .about .row {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal (gambar di atas) */
+  }
+
+  .about .row .about-img {
+    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+  }
+
+  .about .row .about-img-kedua {
+    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+  }
+
+  /* Pengaturan tambahan untuk perangkat seluler dengan lebar <= 450px */
+
+  .about .row .content {
+    padding: 20px; /* Mengurangi padding pada teks untuk perangkat seluler */
+  }
+
+  .about .row .content-kedua {
+    padding: 20px; /* Mengurangi padding pada teks untuk perangkat seluler */
+  }
+
+  .about .row .content h3 {
+    font-size: 24px; /* Ukuran font yang lebih kecil untuk judul */
+  }
+
+  .about .row .content-kedua h3 {
+    font-size: 24px; /* Ukuran font yang lebih kecil untuk judul */
+  }
+
+  .about .row .content p {
+    font-size: 16px; /* Ukuran font yang lebih kecil untuk teks */
+  }
+
+  .about .row .content-kedua p {
+    font-size: 16px; /* Ukuran font yang lebih kecil untuk teks */
   }
 }
