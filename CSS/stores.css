@@ -8,17 +8,17 @@
 /* Style for the .title container */
 .title {
   text-align: center;
-  padding: 50px 20px; /* Tambahkan padding kiri dan kanan */
+  padding: 50px 20px; /* padding kiri dan kanan */
   background-image: url("https://fore.coffee/wp-content/uploads/2023/08/bg-store-title.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #1e463b;
   position: relative;
-  z-index: 1; /* Atur z-index yang lebih tinggi */
+  z-index: 1; 
 }
-/* Style for the .title span */
+
 .title span {
-  font-family: "Plus Jakarta Sans", sans-serif; /* Pastikan Anda sudah memuat font ini */
+  font-family: "Plus Jakarta Sans", sans-serif; 
   font-size: 90px;
   font-weight: 800;
   letter-spacing: -2.7px;
