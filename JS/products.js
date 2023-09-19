@@ -135,5 +135,13 @@ categoryOptions.forEach((option) => {
 
 // berpindah halaman ke checkout.html
 function redirectToPage() {
-  window.location.href = "checkout.html";
+  if (cartQuantity > 0) {
+    window.location.href = "checkout.html";
+  } else {
+    alert("Shopping cart is empty. Add items to the cart before checkout.");
+  }
 }
+
+// ====================================
+// tombol tambah dan kurangi pesanan
+// ====================================
