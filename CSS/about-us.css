@@ -95,7 +95,7 @@
   margin: 0;
   font-size: 15px;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: normal;
   line-height: 25px;
   text-align: center;
@@ -135,7 +135,7 @@
   left: -13px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .timeline::after {
     left: 31px;
   }
