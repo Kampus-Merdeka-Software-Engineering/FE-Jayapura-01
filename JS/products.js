@@ -9,7 +9,6 @@ fetch("assets/products.json")
   });
 
 //looping product to html structures
-
 function addProductToDOM(product) {
   const menuItems = document.querySelector(".menu-item"); // Ganti dengan elemen HTML tempat menampilkan produk
 
@@ -17,7 +16,7 @@ function addProductToDOM(product) {
   const productDiv = document.createElement("div");
   productDiv.className = "menu-items";
   productDiv.dataset.category = product.category;
-  //console.log(product.category);
+
   // Buat elemen gambar
   const img = document.createElement("img");
   img.src = product.imageSrc;
@@ -39,12 +38,10 @@ function addProductToDOM(product) {
   productDiv.appendChild(h3);
   productDiv.appendChild(p);
   productDiv.appendChild(button);
-
   menuItems.appendChild(productDiv);
 }
 
 //Logika shopping  cart
-
 let cartTotal = 0;
 let cartQuantity = 0;
 
@@ -55,7 +52,7 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   let itemImage = document.createElement("img");
   itemImage.src = itemImageSrc;
 
-  listItem.textContent = `${itemName} - Rp. ${itemPrice.toFixed(3)}`;
+  listItem.textContent = `${itemName} - Rp. ${itemPrice}`;
   listItem.insertBefore(itemImage, listItem.firstChild);
 
   list.appendChild(listItem);
@@ -63,12 +60,11 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   cartTotal += itemPrice;
   cartQuantity++;
 
-  document.querySelector(".total").textContent = `Rp. ${cartTotal.toFixed(3)}`;
+  document.querySelector(".total").textContent = `Rp. ${cartTotal}`;
   document.querySelector(".quantity").textContent = cartQuantity;
 }
 
 //add event to button add-to-cart
-
 document.querySelector(".menu-item").addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart-button")) {
     const productDiv = event.target.parentElement;
@@ -100,7 +96,6 @@ closeShoppingCart.addEventListener("click", (event) => {
 });
 
 // Fungsi untuk mengaktifkan filter berdasarkan kategori
-
 const categoryOptions = document.querySelectorAll(".category-option");
 
 function filterProducts(category) {
@@ -137,3 +132,8 @@ categoryOptions.forEach((option) => {
     filterProducts(selectedCategory);
   });
 });
+
+// berpindah halaman ke checkout.html
+function redirectToPage() {
+  window.location.href = "checkout.html";
+}
