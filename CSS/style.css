@@ -38,12 +38,13 @@ header {
 }
 
 .bar {
-  display: none;
+  display: block;
   width: 25px;
   height: 3px;
   background-color: #fff;
   margin: 3px 0;
-  transition: 0.4s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-list {
@@ -90,7 +91,7 @@ header {
   font-weight: 500;
 }
 
-.nav-list a.btn-active {
+.nav-list a#btn-active {
   color: #45f5b4;
 }
 
@@ -140,9 +141,19 @@ header {
 
   .navbar-toggle {
     display: flex;
-    justify-content: flex-end;
-    /* Mengatur elemen ke sebelah kanan */
-    align-items: center;
+    align-items: center; 
+  }
+
+  .navbar-toggle .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .nav-list {
@@ -504,28 +515,38 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
+
   .about .row {
-    flex-direction: column; /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
+    flex-direction: column;
+    /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
   }
 
   .about .row .about-img {
-    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+    flex: 1 1 100%;
+    /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px;
+    /* Jarak antara gambar dengan konten teks */
   }
 
   .about .row .about-img-kedua {
-    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+    flex: 1 1 100%;
+    /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px;
+    /* Jarak antara gambar dengan konten teks */
   }
 
   .about .row .content {
-    flex: 1 1 100%; /* Konten teks mengambil seluruh lebar kontainer */
-    padding: 20px; /* Mengurangi padding */
+    flex: 1 1 100%;
+    /* Konten teks mengambil seluruh lebar kontainer */
+    padding: 20px;
+    /* Mengurangi padding */
   }
 
   .about .row .content-kedua {
-    flex: 1 1 100%; /* Konten teks mengambil seluruh lebar kontainer */
-    padding: 20px; /* Mengurangi padding */
+    flex: 1 1 100%;
+    /* Konten teks mengambil seluruh lebar kontainer */
+    padding: 20px;
+    /* Mengurangi padding */
   }
 
   .about .row .content h3 {
@@ -551,44 +572,56 @@ ul {
   display: block;
   margin: 0 auto;
 }
+
 @media (max-width: 450px) {
   .about .row {
-    flex-direction: column; /* Mengubah tata letak menjadi vertikal (gambar di atas) */
+    flex-direction: column;
+    /* Mengubah tata letak menjadi vertikal (gambar di atas) */
   }
 
   .about .row .about-img {
-    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+    flex: 1 1 100%;
+    /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px;
+    /* Jarak antara gambar dengan konten teks */
   }
 
   .about .row .about-img-kedua {
-    flex: 1 1 100%; /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px; /* Jarak antara gambar dengan konten teks */
+    flex: 1 1 100%;
+    /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px;
+    /* Jarak antara gambar dengan konten teks */
   }
 
   /* Pengaturan tambahan untuk perangkat seluler dengan lebar <= 450px */
 
   .about .row .content {
-    padding: 20px; /* Mengurangi padding pada teks untuk perangkat seluler */
+    padding: 20px;
+    /* Mengurangi padding pada teks untuk perangkat seluler */
   }
 
   .about .row .content-kedua {
-    padding: 20px; /* Mengurangi padding pada teks untuk perangkat seluler */
+    padding: 20px;
+    /* Mengurangi padding pada teks untuk perangkat seluler */
   }
 
   .about .row .content h3 {
-    font-size: 24px; /* Ukuran font yang lebih kecil untuk judul */
+    font-size: 24px;
+    /* Ukuran font yang lebih kecil untuk judul */
   }
 
   .about .row .content-kedua h3 {
-    font-size: 24px; /* Ukuran font yang lebih kecil untuk judul */
+    font-size: 24px;
+    /* Ukuran font yang lebih kecil untuk judul */
   }
 
   .about .row .content p {
-    font-size: 16px; /* Ukuran font yang lebih kecil untuk teks */
+    font-size: 16px;
+    /* Ukuran font yang lebih kecil untuk teks */
   }
 
   .about .row .content-kedua p {
-    font-size: 16px; /* Ukuran font yang lebih kecil untuk teks */
+    font-size: 16px;
+    /* Ukuran font yang lebih kecil untuk teks */
   }
 }
