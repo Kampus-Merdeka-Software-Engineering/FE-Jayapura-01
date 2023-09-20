@@ -161,6 +161,16 @@ header {
     margin-top: -15px;
   }
 
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .nav-list a:hover {
+    box-shadow: none;
+    color: #45f5b4;
+  }
+
   .nav-list li {
     padding: 5px;
     text-align: center;

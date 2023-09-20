@@ -1,264 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <!-- icon fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/cf76925589.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- icon fontawesome-->
-  <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
+    <!-- logo tab -->
+    <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon" />
 
-  <!-- logo tab -->
-  <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon" />
+    <!--style-->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/stores.css" />
+    <title>Coffee.in Stores</title>
+  </head>
 
-  <!--style-->
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/stores.css" />
-  <title>Coffee.in Stores</title>
-</head>
+  <body>
+    <!--NAVIGATION-->
+    <header class="navigationn">
+      <img class="logo" src="assets/logoo.png" alt="logo" />
 
-<body>
-  <!--NAVIGATION-->
-  <header class="navigationn">
-    <img class="logo" src="assets/logoo.png" alt="logo" />
+      <nav class="navbar-menu">
+        <div class="navbar-toggle" id="navbar-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
 
-    <nav class="navbar-menu">
-      <div class="navbar-toggle" id="navbar-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="stores.html" class="btn-active">Stores</a></li>
+        </ul>
+      </nav>
+
+      <div class="btn-navbar">
+        <a href="login_register.html">
+          <button class="login" type="button">
+            <i class="fas fa-user"></i> Account
+          </button>
+        </a>
       </div>
+    </header>
 
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="stores.html" class="btn-active">Stores</a></li>
-      </ul>
-    </nav>
+    <!-- content -->
+    <main class="map">
+      <div class="container">
+        <div class="title">
+          <span>Our Store</span>
+        </div>
 
-    <div class="btn-navbar">
-      <a href="login_register.html">
-        <button class="login" type="button"><i class="fas fa-user"></i> Account</button>
-      </a>
-    </div>
-  </header>
+        <!-- Outlet 1 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet1.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Jakarta</h3>
+            <p>
+              <strong>Address:</strong> Jalan Muchtar Basri no 145, Jakarta
+              Pusat
+            </p>
+            <p><strong>Phone:</strong> 0-22-250-4080</p>
+            <a href="">Get Maps</a>
+          </div>
+        </div>
 
-  <!-- content -->
-  <main class="map">
-    <div class="container">
-      <div class="title">
-        <span>Our Store</span>
-      </div>
+        <!-- Outlet 2 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet2.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Bogor</h3>
+            <p>
+              <strong>Address:</strong> Jalan Guru Patimpus Blok OPQ No 1, Bogor
+            </p>
+            <p><strong>Phone:</strong> 0-31-828-1279</p>
+            <a href="">Get Maps</a>
+          </div>
+        </div>
 
-      <!-- Outlet 1 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet1.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 3 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet3.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Bekasi</h3>
+            <p>
+              <strong>Address:</strong> Jalan Gatot Subroto no 23, Bekasi, Jawa
+              Barat
+            </p>
+            <p><strong>Phone:</strong> 0-21-421-0422</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Jakarta</h3>
-          <p><strong>Address:</strong> Jalan Muchtar Basri no 145, Jakarta Pusat</p>
-          <p><strong>Phone:</strong> 0-22-250-4080</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 2 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet2.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 4 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet4.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Bandung</h3>
+            <p>
+              <strong>Address:</strong> Jalan Cemara no 223, Bandung, Jawa Barat
+            </p>
+            <p><strong>Phone:</strong> +622157900753</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Bogor</h3>
-          <p><strong>Address:</strong> Jalan Guru Patimpus Blok OPQ No 1, Bogor</p>
-          <p><strong>Phone:</strong> 0-31-828-1279</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 3 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet3.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 5 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet5.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Medan</h3>
+            <p>
+              <strong>Address:</strong> Komplek Multatuli Blok 2A, Jalan
+              Multatuli, Medan Barat
+            </p>
+            <p><strong>Phone:</strong> 0-21-722-6688</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Bekasi</h3>
-          <p><strong>Address:</strong> Jalan Gatot Subroto no 23, Bekasi, Jawa Barat</p>
-          <p><strong>Phone:</strong> 0-21-421-0422</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 4 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet4.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 6 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet6.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Solo</h3>
+            <p>
+              <strong>Address:</strong> Solo Bunga Residence 1 Blok B/20, Solo,
+              Jawa Tengah
+            </p>
+            <p><strong>Phone:</strong> 0-21-726-7499</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Bandung</h3>
-          <p><strong>Address:</strong> Jalan Cemara no 223, Bandung, Jawa Barat</p>
-          <p><strong>Phone:</strong> +622157900753</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 5 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet5.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 7 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet7.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Tegal</h3>
+            <p>
+              <strong>Address:</strong>Saphire Estate Tegal, Jl. Raya Pantura
+              No.26, Tegal, Jawa Tengah
+            </p>
+            <p><strong>Phone:</strong> 0-61-822-3880</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Medan</h3>
-          <p><strong>Address:</strong> Komplek Multatuli Blok 2A, Jalan Multatuli, Medan Barat</p>
-          <p><strong>Phone:</strong> 0-21-722-6688</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 6 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet6.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 8 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet8.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Boyolali</h3>
+            <p>
+              <strong>Address:</strong> Harmoni Village, Kabupaten Boyolali,
+              Jawa Tengah
+            </p>
+            <p><strong>Phone:</strong> 0-21-550-5235</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Solo</h3>
-          <p><strong>Address:</strong> Solo Bunga Residence 1 Blok B/20, Solo, Jawa Tengah</p>
-          <p><strong>Phone:</strong> 0-21-726-7499</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 7 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet7.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 9 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet9.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Padang</h3>
+            <p>
+              <strong>Address:</strong> Jl. Jaksa Agung R.Soeprapto No.3,
+              Padang, Sumatera Barat
+            </p>
+            <p><strong>Phone:</strong> 0-21-550-5235</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Tegal</h3>
-          <p><strong>Address:</strong>Saphire Estate Tegal, Jl. Raya Pantura No.26, Tegal, Jawa Tengah</p>
-          <p><strong>Phone:</strong> 0-61-822-3880</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 8 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet8.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 10 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet10.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Lampung</h3>
+            <p>
+              <strong>Address:</strong> Jl. Hos Cokroaminoto No.95, Kota Bandar
+              Lampung, Lampung
+            </p>
+            <p><strong>Phone:</strong> 0-21-550-5235</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Boyolali</h3>
-          <p><strong>Address:</strong> Harmoni Village, Kabupaten Boyolali, Jawa Tengah</p>
-          <p><strong>Phone:</strong> 0-21-550-5235</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 9 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet9.jpg" alt="Outlet Image" class="map-image" />
+        <!-- Outlet 11 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet11.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Banten</h3>
+            <p>
+              <strong>Address:</strong> Jalan Cikini Raya Blok FG2, South
+              Tangerang City, Banten
+            </p>
+            <p><strong>Phone:</strong> 0-21-550-5235</p>
+            <a href="">Get Maps</a>
+          </div>
         </div>
-        <div class="content">
-          <h3>Coffee.in Padang</h3>
-          <p><strong>Address:</strong> Jl. Jaksa Agung R.Soeprapto No.3, Padang, Sumatera Barat </p>
-          <p><strong>Phone:</strong> 0-21-550-5235</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
 
-      <!-- Outlet 10 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet10.jpg" alt="Outlet Image" class="map-image" />
-        </div>
-        <div class="content">
-          <h3>Coffee.in Lampung</h3>
-          <p><strong>Address:</strong> Jl. Hos Cokroaminoto No.95, Kota Bandar Lampung, Lampung</p>
-          <p><strong>Phone:</strong> 0-21-550-5235</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
-
-      <!-- Outlet 11 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet11.jpg" alt="Outlet Image" class="map-image" />
-        </div>
-        <div class="content">
-          <h3>Coffee.in Banten</h3>
-          <p><strong>Address:</strong> Jalan Cikini Raya Blok FG2, South Tangerang City, Banten</p>
-          <p><strong>Phone:</strong> 0-21-550-5235</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
-
-      <!-- Outlet 12 -->
-      <div class="card" style="--clr: #009688">
-        <div class="img-box">
-          <img src="assets/Outlet/Outlet12.jpg" alt="Outlet Image" class="map-image" />
-        </div>
-        <div class="content">
-          <h3>Coffee.in Yogyakarta</h3>
-          <p><strong>Address:</strong> Jl. Sabirin No.20, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
-          <p><strong>Phone:</strong> 0-21-550-5235</p>
-          <a href="">Get Maps</a>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Footer Start -->
-  <footer class="footer">
-    <div class="container-footer">
-      <div class="row-footer">
-        <div class="footer-col">
-          <h4>company</h4>
-          <ul>
-            <li><a href="about-us.html">about us</a></li>
-            <li><a href="stores.html">our store</a></li>
-            <li><a href="about-us.html">Company Founder</a></li>
-            <li><a href="about-us.html">company legality</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Store Products</h4>
-          <ul>
-            <li><a href="products.html">hot coffee</a></li>
-            <li><a href="products.html">cold coffee</a></li>
-            <li><a href="products.html">powder coffee</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Outlet 12 -->
+        <div class="card" style="--clr: #009688">
+          <div class="img-box">
+            <img
+              src="assets/Outlet/Outlet12.jpg"
+              alt="Outlet Image"
+              class="map-image"
+            />
+          </div>
+          <div class="content">
+            <h3>Coffee.in Yogyakarta</h3>
+            <p>
+              <strong>Address:</strong> Jl. Sabirin No.20, Kota Yogyakarta,
+              Daerah Istimewa Yogyakarta
+            </p>
+            <p><strong>Phone:</strong> 0-21-550-5235</p>
+            <a href="">Get Maps</a>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- footer End -->
-</body>
+    </main>
 
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="about-us.html">about us</a></li>
+              <li><a href="stores.html">our store</a></li>
+              <li><a href="about-us.html">Company Founder</a></li>
+              <li><a href="about-us.html">company legality</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Store Products</h4>
+            <ul>
+              <li><a href="products.html">hot coffee</a></li>
+              <li><a href="products.html">cold coffee</a></li>
+              <li><a href="products.html">powder coffee</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="about-us.html">about us</a></li>
+              <li><a href="stores.html">our store</a></li>
+              <li><a href="about-us.html">Company Founder</a></li>
+              <li><a href="about-us.html">company legality</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Store Products</h4>
+            <ul>
+              <li><a href="products.html">hot coffee</a></li>
+              <li><a href="products.html">cold coffee</a></li>
+              <li><a href="products.html">powder coffee</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+    <script src="JS/script.js"></script>
+  </body>
 </html>
