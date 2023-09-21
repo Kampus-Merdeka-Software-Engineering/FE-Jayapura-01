@@ -161,4 +161,12 @@
   .right {
     left: 0%;
   }
+
+  .timeline-container h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-header__title {
+    font-size: 20px;
+  }
 }

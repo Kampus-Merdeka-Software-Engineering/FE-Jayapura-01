@@ -625,3 +625,16 @@ ul {
     /* Ukuran font yang lebih kecil untuk teks */
   }
 }
+
+@media (max-width: 600px) {
+  .team h2 {
+    font-size: 2rem;
+  }
+  .team .row {
+    margin-top: 2rem;
+  }
+  .team .row .team-card {
+    width: 180px;
+    padding-bottom: 3rem;
+  }
+}
