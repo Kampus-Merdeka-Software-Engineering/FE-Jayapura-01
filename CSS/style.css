@@ -516,6 +516,10 @@ ul {
     margin-bottom: 30px;
   }
 
+  #about.about {
+    padding-top: 0px;
+  }
+
   .about .row {
     flex-direction: column;
     /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
@@ -550,9 +554,9 @@ ul {
   }
 
   .about .row .content h3 {
-    font-size: 55px;
+    font-size: 50px;
     padding-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 
   .about .row .content-kedua h3 {
@@ -561,9 +565,45 @@ ul {
   }
 
   .about .row .content p {
-    font-size: 35px;
+    font-size: 20px;
     padding-top: 0px;
     padding-bottom: 10px;
+  }
+
+  .line-left {
+    left: 0;
+    transform: translateY(-50%);
+    width: 25%;
+  }
+
+  .line-right {
+    right: 0;
+    transform: translateY(-50%);
+    width: 25%;
+  }
+
+  .text {
+    font-size: 35px;
+    font-family: "Poppins";
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .point i {
+    color: #1e463b;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .point h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .point p {
+    display: none;
+    font-size: 8px;
+    line-height: 1.5;
   }
 }
 
@@ -574,6 +614,10 @@ ul {
 }
 
 @media (max-width: 450px) {
+  #about.about {
+    padding-top: 0px;
+  }
+
   .about .row {
     flex-direction: column;
     /* Mengubah tata letak menjadi vertikal (gambar di atas) */
@@ -623,6 +667,42 @@ ul {
   .about .row .content-kedua p {
     font-size: 16px;
     /* Ukuran font yang lebih kecil untuk teks */
+  }
+
+  .line-left {
+    left: 0;
+    transform: translateY(-50%);
+    width: 15%;
+  }
+
+  .line-right {
+    right: 0;
+    transform: translateY(-50%);
+    width: 15%;
+  }
+
+  .text {
+    font-size: 25px;
+    font-family: "Poppins";
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .point i {
+    color: #1e463b;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .point h2 {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .point p {
+    display: none;
+    font-size: 5px;
+    line-height: 1.5;
   }
 }
 
