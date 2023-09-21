@@ -164,9 +164,11 @@
 
   .timeline-container h2 {
     font-size: 2rem;
+    margin-bottom: 3px;
   }
 
   .timeline-header__title {
     font-size: 20px;
+    padding: 20px;
   }
 }

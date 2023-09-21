@@ -141,7 +141,7 @@ header {
 
   .navbar-toggle {
     display: flex;
-    align-items: center; 
+    align-items: center;
   }
 
   .navbar-toggle .active .bar:nth-child(2) {
@@ -629,6 +629,10 @@ ul {
 @media (max-width: 600px) {
   .team h2 {
     font-size: 2rem;
+  }
+  .team p {
+    padding: 20px;
+    margin-top: -20px;
   }
   .team .row {
     margin-top: 2rem;
