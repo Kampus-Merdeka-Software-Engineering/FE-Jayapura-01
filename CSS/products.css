@@ -103,8 +103,8 @@ html {
   z-index: 9999;
 }
 
-.list {
-  display: grid;
+.cart-list {
+  display: inline-block;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 20px;
   row-gap: 20px;
@@ -112,6 +112,80 @@ html {
   justify-items: left;
   padding-left: 30px;
 }
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  max-width: 9.5rem; 
+  margin-right: 10px;
+}
+
+.item-info {
+  flex-grow: 1; 
+}
+
+.item-info h4 {
+  font-size: 16px; 
+  margin: 0;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.item-quantity button {
+  font-size: 16px; 
+  margin: 0 5px; 
+}
+
+/* Styling untuk tombol decrement */
+.decrement {
+  background-color: #ff6b6b; 
+  color: #fff;
+  border: none; 
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer; 
+  font-weight: bold;
+  margin-right: 5px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Styling untuk tombol increment */
+.increment {
+  background-color: #6bff6b; 
+  color: #fff; 
+  border: none; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Styling Quantity*/
+
+.quantity-display {
+  background-color: #fff;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  margin: 0 5px; 
+  font-weight: bold; 
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+
 
 .card h1 {
   color: var(--primary);
