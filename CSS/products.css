@@ -10,19 +10,22 @@ html {
 }
 
 .manual-buttons {
+  position: relative;
   text-align: center;
   margin-top: 20px;
 }
 
 .prev-button {
+  margin-top: -300px;
   left: 10px;
-  position: fixed;
+  position: relative;
   z-index: 500;
 }
 
 .next-button {
+  margin-top: -300px;
   right: 10px;
-  position: fixed;
+  position: relative;
   z-index: 500;
 }
 
@@ -49,36 +52,43 @@ html {
 /* ======================== */
 /* shopping cart start*/
 /* ======================== */
+.container-shoppping {
+  height: 70px;
+}
+
 .shopping {
-  position: relative;
-  text-align: right;
+  display: grid;
+  grid-template-columns: 50fr 1fr 1fr;
+  align-items: center;
+  gap: 5px;
 }
 
 .shopping h1 {
   font-size: 30px;
   text-align: center;
+  margin-left: 150px;
 }
 
 .shopping img {
-  margin-right: 30px;
+  position: relative;
   padding: 10px;
   cursor: pointer;
+  margin-right: 50px;
 }
 
 .shopping span {
+  position: relative;
   width: 20px;
   height: 20px;
   background-color: red;
   border-radius: 50%;
   border: 1px solid white;
-  display: flex;
   justify-content: center;
   color: white;
-  position: absolute;
-  right: 33px;
-  top: 95px;
+  right: 75px;
+  top: -10px;
   font-size: 10px;
-  padding: 1px;
+  padding: 3px;
 }
 
 .card {
@@ -180,8 +190,6 @@ html {
 /* category */
 .categories-container a {
   display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
   padding: 10px;
   text-decoration: none;
   color: #333;
@@ -232,6 +240,17 @@ html {
     margin-right: 10px;
     padding: 10px;
   }
+  .prev-button,
+  .next-button {
+    margin-top: -120px;
+    scale: 0.75;
+  }
+  .next-button {
+    right: 1px;
+  }
+  .prev-button {
+    left: 1px;
+  }
 }
 /* Style untuk tombol "Add to Cart" */
 .add-to-cart-button {
@@ -277,6 +296,23 @@ html {
   }
 
   p {
+    font-size: smaller;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .shopping h1 {
+    font-size: 25px;
+    margin-left: 80px;
+  }
+  .shopping img {
+    width: 40px;
+    margin-right: 0;
+  }
+  .shopping span {
+    right: 22px;
+  }
+  .categories-container a {
     font-size: smaller;
   }
 }
