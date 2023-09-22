@@ -601,7 +601,6 @@ ul {
   }
 
   .point p {
-    display: none;
     font-size: 8px;
     line-height: 1.5;
   }
@@ -688,21 +687,30 @@ ul {
     text-align: center;
   }
 
+  .container-superiority {
+    display: grid;
+    grid-template-columns: 1fr; /* Menentukan satu kolom */
+    gap: 5px; /* Menentukan jarak antar item */
+    justify-items: center; /* Posisi horizontal tengah */
+    align-items: center; /* Posisi vertikal tengah */
+  }
+
   .point i {
     color: #1e463b;
     font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .point h2 {
-    font-size: 8px;
     margin-bottom: 10px;
   }
 
+  .point h2 {
+    font-size: 9px;
+    margin-bottom: 7px;
+  }
+
   .point p {
-    display: none;
-    font-size: 5px;
+    font-size: 8px;
+    margin-bottom: 3.5px;
     line-height: 1.5;
+    text-align: center;
   }
 }
 
