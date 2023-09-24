@@ -436,6 +436,14 @@ ul {
     text-align: center;
     margin: auto;
   }
+  /* RESPONSIVE VIDEO */
+  .video_opening {
+    width: 100%;
+    height: 73vh;
+    padding-top: 69px;
+    position: relative;
+    overflow: hidden;
+  }
   /* RESPONSIVE FOOTER */
   .footer-col {
     width: 50%;
@@ -596,6 +604,12 @@ ul {
     gap: 5px; /* Menentukan jarak antar item */
     justify-items: center; /* Posisi horizontal tengah */
     align-items: center; /* Posisi vertikal tengah */
+  }
+
+  .point {
+    width: 45%;
+    text-align: center;
+    margin: 0 1%;
   }
 
   .point i {
