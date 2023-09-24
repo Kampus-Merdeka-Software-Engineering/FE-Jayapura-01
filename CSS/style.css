@@ -548,21 +548,7 @@ ul {
     /* Jarak antara gambar dengan konten teks */
   }
 
-  .about .row .about-img-kedua {
-    flex: 1 1 100%;
-    /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px;
-    /* Jarak antara gambar dengan konten teks */
-  }
-
-  /* Pengaturan tambahan untuk perangkat seluler dengan lebar <= 450px */
-
   .about .row .content {
-    padding: 20px;
-    /* Mengurangi padding pada teks untuk perangkat seluler */
-  }
-
-  .about .row .content-kedua {
     padding: 20px;
     /* Mengurangi padding pada teks untuk perangkat seluler */
   }
@@ -572,17 +558,7 @@ ul {
     /* Ukuran font yang lebih kecil untuk judul */
   }
 
-  .about .row .content-kedua h3 {
-    font-size: 24px;
-    /* Ukuran font yang lebih kecil untuk judul */
-  }
-
   .about .row .content p {
-    font-size: 16px;
-    /* Ukuran font yang lebih kecil untuk teks */
-  }
-
-  .about .row .content-kedua p {
     font-size: 16px;
     /* Ukuran font yang lebih kecil untuk teks */
   }
