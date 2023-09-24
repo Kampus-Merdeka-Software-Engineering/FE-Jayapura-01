@@ -1,0 +1,36 @@
+:root {
+    --primary: #1e463b;
+    --secondary: #3c806d;
+    --muda: #e2ede9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", "sans-Serif";
+    background-color: var(--muda);
+    color: var(--primary);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title-checkout{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+header hr{
+    color: var(--primary);
+    text-align: center;
+    width: 90%;
+}
