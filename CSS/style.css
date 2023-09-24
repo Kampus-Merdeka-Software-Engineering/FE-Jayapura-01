@@ -123,72 +123,6 @@ header {
   z-index: 10000;
 }
 
-/* ==================== */
-/* RESPONSIVE NAVBAR */
-/* ==================== */
-@media screen and (max-width: 768px) {
-  header {
-    background-color: gray;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .bar {
-    display: block;
-  }
-
-  .navbar-toggle {
-    display: flex;
-    align-items: center;
-  }
-
-  .navbar-toggle .active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar-toggle .active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .navbar-toggle .active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 84px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-  }
-
-  .nav-list.active {
-    display: flex;
-    margin: auto;
-    margin-top: -15px;
-  }
-
-  .nav-list a {
-    font-size: 18px;
-    color: #fff;
-  }
-
-  .nav-list a:hover {
-    box-shadow: none;
-    color: #45f5b4;
-  }
-
-  .nav-list li {
-    padding: 5px;
-    text-align: center;
-    margin: auto;
-  }
-}
-
 /* ======= */
 /* Video */
 /* ======= */
@@ -251,15 +185,6 @@ header {
   margin-top: 12px;
 }
 
-.about .row .about-img-kedua {
-  flex: 1 1 45rem;
-}
-
-.about-img-kedua img {
-  width: 90%;
-  margin-top: 12px;
-}
-
 .about .row .content {
   flex: 1 1 40rem;
   padding: 50px;
@@ -282,29 +207,6 @@ header {
   text-align: center;
 }
 
-.about .row .content-kedua {
-  flex: 1 1 40rem;
-  padding: 50px;
-  padding-top: 0px;
-}
-
-.about .row .content-kedua h3 {
-  font-size: 45px;
-  font-weight: 500;
-  color: #1e463b;
-  margin: 2rem, 0;
-  padding-top: 50px;
-  text-align: center;
-}
-
-.about .row .content-kedua p {
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.6;
-  text-align: justify;
-}
-
 .about .row .content a {
   text-decoration: none;
   color: #457c6d;
@@ -313,43 +215,6 @@ header {
 
 .about .row .content a:hover {
   color: #19d4a5ab;
-}
-
-/* Our Founder Section */
-.team h2 {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 2.6rem;
-}
-
-.team p {
-  text-align: center;
-  max-width: 30rem;
-  margin: auto;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.team .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-  justify-content: center;
-}
-
-.team .row .team-card {
-  text-align: center;
-  padding-bottom: 4rem;
-}
-
-.team .row .team-card img {
-  border-radius: 50%;
-  width: 80%;
-}
-
-.team .row .team-card .team-card-title {
-  margin: 1rem auto 0.5rem;
 }
 
 /* =========== */
@@ -507,15 +372,76 @@ ul {
   background-color: #2ccea0;
 }
 
-/* ==================== */
-/* RESPONSIVE FOOTER */
-/* ==================== */
+/* Media Queries */
+/* Tablet */
 @media (max-width: 768px) {
+  /* RESPONSIVE NAVBAR */
+  header {
+    background-color: gray;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bar {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-toggle .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+    margin: auto;
+    margin-top: -15px;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .nav-list a:hover {
+    box-shadow: none;
+    color: #45f5b4;
+  }
+
+  .nav-list li {
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+  }
+  /* RESPONSIVE FOOTER */
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
-
+  /* RESPONSIVE ABOUT US */
   #about.about {
     padding-top: 0px;
   }
@@ -532,21 +458,7 @@ ul {
     /* Jarak antara gambar dengan konten teks */
   }
 
-  .about .row .about-img-kedua {
-    flex: 1 1 100%;
-    /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px;
-    /* Jarak antara gambar dengan konten teks */
-  }
-
   .about .row .content {
-    flex: 1 1 100%;
-    /* Konten teks mengambil seluruh lebar kontainer */
-    padding: 20px;
-    /* Mengurangi padding */
-  }
-
-  .about .row .content-kedua {
     flex: 1 1 100%;
     /* Konten teks mengambil seluruh lebar kontainer */
     padding: 20px;
@@ -559,17 +471,12 @@ ul {
     padding-bottom: 0px;
   }
 
-  .about .row .content-kedua h3 {
-    padding-top: 0px;
-    padding-bottom: 10px;
-  }
-
   .about .row .content p {
     font-size: 20px;
     padding-top: 0px;
     padding-bottom: 10px;
   }
-
+  /* RESPONSIVE SUPERIORITY */
   .line-left {
     left: 0;
     transform: translateY(-50%);
@@ -606,13 +513,9 @@ ul {
   }
 }
 
-/* Tambahan: Atur gambar agar selalu berada di tengah (horizontal) */
-.about-img-kedua img {
-  display: block;
-  margin: 0 auto;
-}
-
+/* Mobile Phone */
 @media (max-width: 450px) {
+  /* RESPONSIVE ABOUT US */
   #about.about {
     padding-top: 0px;
   }
@@ -667,7 +570,7 @@ ul {
     font-size: 16px;
     /* Ukuran font yang lebih kecil untuk teks */
   }
-
+  /* RESPONSIVE SUPERIORITY */
   .line-left {
     left: 0;
     transform: translateY(-50%);
@@ -711,22 +614,5 @@ ul {
     margin-bottom: 3.5px;
     line-height: 1.5;
     text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .team h2 {
-    font-size: 2rem;
-  }
-  .team p {
-    padding: 20px;
-    margin-top: -20px;
-  }
-  .team .row {
-    margin-top: 2rem;
-  }
-  .team .row .team-card {
-    width: 180px;
-    padding-bottom: 3rem;
   }
 }
