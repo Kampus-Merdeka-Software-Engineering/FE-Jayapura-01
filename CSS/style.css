@@ -523,6 +523,14 @@ ul {
 
 /* Mobile Phone */
 @media (max-width: 450px) {
+  /* RESPONSIVE VIDEO */
+  .video_opening {
+    width: 100%;
+    height: 46vh;
+    padding-top: 69px;
+    position: relative;
+    overflow: hidden;
+  }
   /* RESPONSIVE ABOUT US */
   #about.about {
     padding-top: 0px;
