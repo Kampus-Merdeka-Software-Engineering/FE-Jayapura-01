@@ -22,15 +22,16 @@ header{
     justify-content: center;
 }
 
-header .title-checkout{
-    margin: 0;
-    font-size: 25px;
-    font-weight: 600;
-    padding-top: 30px;
+.title-checkout {
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 25px;
+    text-align: left;
 }
 
-header hr{
+header hr {
+    position: absolute;
     color: var(--primary);
-    text-align: center;
     width: 90%;
+    top: 70px;
 }
