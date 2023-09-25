@@ -40,10 +40,11 @@
 
 .about .row .content-kedua h3 {
   font-size: 45px;
-  font-weight: 500;
+  font-weight: 600;
   color: #1e463b;
   margin: 2rem, 0;
-  padding-top: 50px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -358,7 +359,6 @@
 
   .about .row .content-kedua h3 {
     font-size: 24px;
-    /* Ukuran font yang lebih kecil untuk judul */
   }
 
   .about .row .content-kedua p {
