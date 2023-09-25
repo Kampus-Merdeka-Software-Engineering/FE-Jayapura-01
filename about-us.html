@@ -15,6 +15,9 @@
   <!-- AOS (Animate On Scrool) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+  <!-- feather icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <!-- logo tab -->
   <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon" />
 
@@ -49,7 +52,7 @@
     <div class="btn-navbar">
       <a href="login_register.html">
         <button class="login" type="button">
-          <i class="fas fa-user"></i> Account
+          <i data-feather="user"></i>
         </button>
       </a>
     </div>
@@ -333,6 +336,9 @@
   <script src="JS/script.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    feather.replace();
   </script>
 </body>
 

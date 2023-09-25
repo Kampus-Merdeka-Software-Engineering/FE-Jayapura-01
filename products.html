@@ -13,9 +13,8 @@
     <!-- icon fontawesome-->
     <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
 
-    <!-- Box icon 
-    <link rel="stylesheet" href="boxicons.min.css">-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- logo tab -->
     <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
@@ -24,7 +23,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/products.css">
     <title>Coffee.in Products</title>
-    
+
 </head>
 
 <body>
@@ -50,7 +49,7 @@
         <div class="btn-navbar">
             <a href="login_register.html">
                 <button class="login" type="button">
-                    <i class="fas fa-user"></i> Account
+                    <i data-feather="user"></i>
                 </button>
             </a>
         </div>
@@ -89,7 +88,6 @@
             <!-- icon cart -->
             <div class="shopping">
                 <h1>OUR MENUS</h1>
-                <!-- <br> <br> -->
                 <img src="assets/shopping-cart.svg " alt="cart">
                 <span class="quantity">0</span>
             </div>
@@ -105,7 +103,7 @@
                 <div class="closeShopping">Close</div>
             </div>
         </div>
-        
+
         <!-- shopping cart end -->
 
         <div class="categories-container">
@@ -123,6 +121,9 @@
 
         <script src="JS/script.js"></script>
         <script src="JS/products.js"></script>
+        <script>
+            feather.replace();
+        </script>
 
 </body>
 
