@@ -64,9 +64,10 @@ header {
 }
 
 .logo {
-  width: 130px;
-  height: auto;
+  width: 170px;
+  height: 210px;
   margin-left: 10px;
+  padding-top: 5px;
 }
 
 .navigationn {
@@ -78,6 +79,7 @@ header {
   background-color: var(--primary);
   position: fixed;
   width: 100%;
+  height: 70px;
   z-index: 10000;
 }
 
@@ -383,6 +385,8 @@ ul {
 
   .bar {
     display: block;
+    color: var(--muda);
+    border-radius: 5px;
   }
 
   .navbar-toggle {
