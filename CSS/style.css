@@ -58,6 +58,18 @@ header {
   font-size: 18px;
 }
 
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(-50deg) translate(-6px, 6px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(50deg) translate(-6px, -6px);
+}
+
 .nav-list a:hover {
   box-shadow: 0 -3px 0px #fff inset, 500px 0 0 rgba(255, 255, 255, 0.03) inset;
   padding: 35px 25px 22px 25px;
@@ -373,6 +385,7 @@ ul {
 /* Media Queries */
 /* Tablet */
 @media (max-width: 768px) {
+
   /* RESPONSIVE NAVBAR */
   header {
     background-color: gray;
@@ -393,18 +406,6 @@ ul {
     align-items: center;
   }
 
-  .navbar-toggle .active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar-toggle .active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .navbar-toggle .active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
   .nav-list {
     display: none;
     flex-direction: column;
@@ -413,12 +414,21 @@ ul {
     left: 0;
     background-color: #333;
     width: 100%;
+    list-style-type: none;
+    margin-top: -15px;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .nav-list.active {
     display: flex;
-    margin: auto;
-    margin-top: -15px;
+    margin-top:-15px;
+    max-height: 500px;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .nav-list a {
@@ -436,6 +446,7 @@ ul {
     text-align: center;
     margin: auto;
   }
+
   /* RESPONSIVE VIDEO */
   .video_opening {
     width: 100%;
@@ -444,11 +455,13 @@ ul {
     position: relative;
     overflow: hidden;
   }
+
   /* RESPONSIVE FOOTER */
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
+
   /* RESPONSIVE ABOUT US */
   #about.about {
     padding-top: 0px;
@@ -484,6 +497,7 @@ ul {
     padding-top: 0px;
     padding-bottom: 10px;
   }
+
   /* RESPONSIVE SUPERIORITY */
   .line-left {
     left: 0;
@@ -523,6 +537,7 @@ ul {
 
 /* Mobile Phone */
 @media (max-width: 450px) {
+
   /* RESPONSIVE VIDEO */
   .video_opening {
     width: 100%;
@@ -531,6 +546,7 @@ ul {
     position: relative;
     overflow: hidden;
   }
+
   /* RESPONSIVE ABOUT US */
   #about.about {
     padding-top: 0px;
@@ -562,6 +578,7 @@ ul {
     font-size: 16px;
     /* Ukuran font yang lebih kecil untuk teks */
   }
+
   /* RESPONSIVE SUPERIORITY */
   .line-left {
     left: 0;
@@ -584,10 +601,14 @@ ul {
 
   .container-superiority {
     display: grid;
-    grid-template-columns: 1fr; /* Menentukan satu kolom */
-    gap: 5px; /* Menentukan jarak antar item */
-    justify-items: center; /* Posisi horizontal tengah */
-    align-items: center; /* Posisi vertikal tengah */
+    grid-template-columns: 1fr;
+    /* Menentukan satu kolom */
+    gap: 5px;
+    /* Menentukan jarak antar item */
+    justify-items: center;
+    /* Posisi horizontal tengah */
+    align-items: center;
+    /* Posisi vertikal tengah */
   }
 
   .point {

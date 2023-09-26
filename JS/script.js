@@ -1,6 +1,7 @@
 // =================
 // responsive navbar
 // =================
+
 document.addEventListener("DOMContentLoaded", function () {
   const navbarToggle = document.getElementById("navbar-toggle");
   const navList = document.querySelector(".nav-list");
@@ -16,3 +17,13 @@ addEventListener("click", () => {
   navbarToggle.classList.remove("active");
   navList.classList.remove("active");
 }))
+
+/* 
+const navbarToggle = document.getElementById('navbar-toggle');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+navbarToggle.addEventListener('click', ()=> {
+  navbarToggle.classList.toggle('active');
+  navbarMenu.classList.toggle('active');
+});
+*/

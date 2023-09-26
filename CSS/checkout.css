@@ -35,3 +35,63 @@ header hr {
     width: 90%;
     top: 70px;
 }
+
+/* CSS untuk formulir checkout */
+.checkout-form {
+  max-width: 400px; /* Lebar maksimum formulir */
+  margin: 0 auto; /* Tengahkan formulir di halaman */
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya label input */
+label {
+  display: block; /* Agar label dan input tampil di bawah */
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Gaya input teks */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Gaya daftar item yang dibeli */
+#checkout-items {
+  list-style-type: none; /* Hapus bullet points dari daftar */
+  padding: 0;
+}
+
+#checkout-items li {
+  margin-top: 5px;
+}
+
+/* Gaya tombol "Buat Pesanan" */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsif: Atur lebar maksimum formulir saat layar lebih kecil */
+@media (max-width: 768px) {
+  .checkout-form {
+    max-width: 100%;
+  }
+}
