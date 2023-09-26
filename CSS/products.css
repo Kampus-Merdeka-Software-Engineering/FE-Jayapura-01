@@ -155,7 +155,7 @@ html {
 
 /* Styling untuk tombol decrement */
 .decrement {
-  background-color: #ff6b6b;
+  background-color: var(--primary);
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -170,7 +170,7 @@ html {
 
 /* Styling untuk tombol increment */
 .increment {
-  background-color: #6bff6b;
+  background-color: var(--primary);
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -183,9 +183,8 @@ html {
 }
 
 /* Styling Quantity*/
-
 .quantity-display {
-  background-color: #fff;
+  background-color: #e9e7e7;
   padding: 5px 10px;
   border-radius: 5px;
   margin: 0 5px;
