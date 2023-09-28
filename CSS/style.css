@@ -58,6 +58,10 @@ header {
   font-size: 18px;
 }
 
+.account-bar .nav-link{
+  display: none;
+}
+
 .navbar-toggle.active .bar:nth-child(1) {
   transform: rotate(-45deg) translate(-7px, 6px);
 }
@@ -72,7 +76,7 @@ header {
 
 .nav-list a:hover {
   box-shadow: 0 -3px 0px #fff inset, 500px 0 0 rgba(255, 255, 255, 0.03) inset;
-  padding: 35px 25px 22px 25px;
+  padding: 35px 15px 20px 15px;
 }
 
 .logo {
@@ -393,8 +397,7 @@ ul {
     position: relative;
     overflow: hidden;
   }
-}
-@media (max-width: 768px) {
+
   /* RESPONSIVE NAVBAR */
   header {
     background-color: gray;
@@ -402,6 +405,7 @@ ul {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: left;
   }
 
   .bar {
@@ -420,9 +424,9 @@ ul {
     flex-direction: column;
     position: absolute;
     top: 84px;
-    left: 0;
+    right: 0;
     background-color: #333;
-    width: 100%;
+    width: 40% auto;
     list-style-type: none;
     margin-top: -15px;
     padding: 0;
@@ -431,9 +435,11 @@ ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    align-items: flex-start;
   }
 
   .nav-list.active {
+    padding-top: 20px;
     display: flex;
     margin-top: -15px;
     max-height: 500px;
@@ -443,6 +449,7 @@ ul {
   .nav-list a {
     font-size: 18px;
     color: #fff;
+    margin: 0;
   }
 
   .nav-list a:hover {
@@ -450,12 +457,36 @@ ul {
     color: #45f5b4;
   }
 
-  .nav-list li {
-    padding: 5px;
-    text-align: center;
+  .nav-list li a{
     margin: auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 40px;
+    transition: all 0.3s;
   }
 
+  .btn-navbar{
+    display: none;
+  }
+
+  .account-bar .nav-link{
+    display: flex;
+  }
+
+  .account-bar a{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .account-bar a:hover {
+    box-shadow: none;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
   /* RESPONSIVE VIDEO */
   .video_opening {
     width: 100%;
@@ -478,7 +509,6 @@ ul {
 
   .about .row {
     flex-direction: column;
-    /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
   }
 
   .about .row .about-img {
