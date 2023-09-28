@@ -10,6 +10,7 @@
 
 .about .row {
   display: flex;
+  padding-top: 40px;
 }
 
 .about .row .about-img-kedua {
