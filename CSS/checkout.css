@@ -1,97 +1,152 @@
-:root {
-    --primary: #1e463b;
-    --secondary: #3c806d;
-    --muda: #e2ede9;
+.rowcheckout {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+h3,
+h4 {
+  margin-bottom: 10px;
 }
 
-body {
-    font-family: "Poppins", "sans-Serif";
-    background-color: var(--muda);
-    color: var(--primary);
+h2 {
+  margin-left: 20px;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-checkout {
-    font-size: 30px;
-    font-weight: 500;
-    padding-top: 25px;
-    text-align: left;
-}
-
-header hr {
-    position: absolute;
-    color: var(--primary);
-    width: 90%;
-    top: 70px;
-}
-
-/* CSS untuk formulir checkout */
-.checkout-form {
-  max-width: 400px; /* Lebar maksimum formulir */
-  margin: 0 auto; /* Tengahkan formulir di halaman */
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Gaya label input */
-label {
-  display: block; /* Agar label dan input tampil di bawah */
+.col-25 {
+  -ms-flex: 15%; /* IE10 */
+  flex: 10%;
+  margin-right: 20px;
   margin-top: 10px;
-  font-weight: bold;
 }
 
-/* Gaya input teks */
-input[type="text"],
-textarea {
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 50%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 10px 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+input[type="text"] {
   width: 100%;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 3px;
 }
 
-/* Gaya daftar item yang dibeli */
-#checkout-items {
-  list-style-type: none; /* Hapus bullet points dari daftar */
-  padding: 0;
+label {
+  margin-bottom: 10px;
+  display: block;
 }
 
-#checkout-items li {
-  margin-top: 5px;
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
 }
 
-/* Gaya tombol "Buat Pesanan" */
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
+.btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
   border: none;
-  border-radius: 5px;
-  margin-top: 10px;
+  width: 100%;
+  border-radius: 3px;
   cursor: pointer;
+  font-size: 17px;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background-color: #45a049;
 }
 
-/* Responsif: Atur lebar maksimum formulir saat layar lebih kecil */
-@media (max-width: 768px) {
-  .checkout-form {
-    max-width: 100%;
+span.price {
+  float: right;
+  color: grey;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: #45f5b4;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+  background-color: var(--primary);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 31%;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
   }
 }
