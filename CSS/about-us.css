@@ -5,7 +5,8 @@
 .about h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .about .row {
@@ -219,7 +220,67 @@
   left: -13px;
 }
 
-@media screen and (max-width: 768px) {
+/* Media Queries */
+/* Tablet */
+@media (max-width: 768px) {
+  #about.about {
+    padding-top: 0px;
+  }
+
+  .about .row {
+    flex-direction: column;
+    /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
+  }
+
+  .about .row .about-img-kedua {
+    flex: 1 1 100%;
+    /* Gambar mengambil seluruh lebar kontainer */
+    margin-bottom: 20px;
+    /* Jarak antara gambar dengan konten teks */
+  }
+
+  .about .row .content-kedua {
+    flex: 1 1 100%;
+    /* Konten teks mengambil seluruh lebar kontainer */
+    padding: 20px;
+    /* Mengurangi padding */
+  }
+
+  .about .row .content-kedua h2 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-size: 40px;
+  }
+
+  .about .row .content-kedua p {
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .about-img-kedua img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team h2 {
+    font-size: 2rem;
+  }
+
+  .team p {
+    padding: 20px;
+    margin-top: -20px;
+  }
+
+  .team .row {
+    margin-top: 2rem;
+  }
+
+  .team .row .team-card {
+    width: 180px;
+    padding-bottom: 3rem;
+  }
+
   .timeline::after {
     left: 31px;
   }
@@ -257,68 +318,6 @@
   }
 }
 
-/* Media Queries */
-/* Tablet */
-@media (max-width: 912px) {
-  #about.about {
-    padding-top: 0px;
-  }
-
-  .about .row {
-    flex-direction: column;
-    /* Mengubah tata letak menjadi vertikal (gambar di bawah) */
-  }
-
-  .about .row .about-img-kedua {
-    flex: 1 1 100%;
-    /* Gambar mengambil seluruh lebar kontainer */
-    margin-bottom: 20px;
-    /* Jarak antara gambar dengan konten teks */
-  }
-
-  .about .row .content-kedua {
-    flex: 1 1 100%;
-    /* Konten teks mengambil seluruh lebar kontainer */
-    padding: 20px;
-    /* Mengurangi padding */
-  }
-
-  .about .row .content-kedua h3 {
-    padding-top: 0px;
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
-
-  .about .row .content-kedua p {
-    font-size: 15px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-  }
-
-  .about-img-kedua img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .team h2 {
-    font-size: 2rem;
-  }
-
-  .team p {
-    padding: 20px;
-    margin-top: -20px;
-  }
-
-  .team .row {
-    margin-top: 2rem;
-  }
-
-  .team .row .team-card {
-    width: 180px;
-    padding-bottom: 3rem;
-  }
-}
-
 /* Mobile Phone */
 @media (max-width: 450px) {
   /* RESPONSIVE ABOUT US */
@@ -331,7 +330,7 @@
     /* Mengubah tata letak menjadi vertikal (gambar di atas) */
   }
 
-  .about .row .about-img-kedua  img{
+  .about .row .about-img-kedua img {
     flex: 1 1 100%;
     /* Gambar mengambil seluruh lebar kontainer */
     margin-bottom: 20px;
@@ -343,8 +342,8 @@
     /* Mengurangi padding pada teks untuk perangkat seluler */
   }
 
-  .about .row .content-kedua h3 {
-    font-size: 24px;
+  .about .row .content-kedua h2 {
+    font-size: 30px;
   }
 
   .about .row .content-kedua p {
@@ -354,5 +353,61 @@
 
   .team p {
     font-size: 15px;
+  }
+
+  .timeline::after {
+    left: 26px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .timeline-item::before {
+    left: 50px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 10px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .timeline-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+  }
+
+  .timeline-header__title {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .timeline__content-title span {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .timeline__content-desc {
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: normal;
+    line-height: 25px;
+    text-align: center;
   }
 }
