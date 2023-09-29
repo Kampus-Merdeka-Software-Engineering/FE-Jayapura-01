@@ -41,40 +41,42 @@
                   <input type="text" id="email" name="email" placeholder="john@example.com" />
                   <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
                   <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" />
-
-                  <div class="rowcheckout">
-                    <div class="col-50">
-                      <label for="Provinsi">Provinsi</label>
-                      <input type="text" id="Provinsi" name="Provinsi" placeholder="NY" />
-                    </div>
-                    <div class="col-50">
-                      <label for="Kota">Kota</label>
-                      <input type="text" id="Kota" name="Kota" placeholder="10001" />
-                    </div>
-                    <div class="col-50">
-                      <label for="Kecamatan">Kecamatan</label>
-                      <input type="text" id="Kecamatan" name="Kecamatan" placeholder="10001" />
-                    </div>
-                    <div class="col-50">
-                      <label for="Kodepos">Kode Pos</label>
-                      <input type="text" id="Kodepos" name="Kodepos" placeholder="10001" />
-                    </div>
-                  </div>
                 </div>
 
                 <div class="col-50">
                   <h3>Payment</h3>
-                  <div class="dropdown">
-                    <button class="dropbtn" onclick="myFunction()">
-                      Transfer Bank
-                      <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="myDropdown">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
-                    </div>
+                  <label class="labelpayment" for="transferbank">Pembayaran Langsung</label>
+                  <div class="radio">
+                    <label><input type="radio" name="paycash" value="COD" /> COD</label>
+                    <label><input type="radio" name="nocash" value="Payment Lainnya" /> Payment Lainnya</label>
                   </div>
+                  <label class="labelpayment" class="labelpayment" for="dompet">Dompet Digital</label>
+                  <select class="dropdown" class="dropdown" name="dompet" id="dompet">
+                    <option value="">GoPay</option>
+                    <option value="">ShopeePay</option>
+                    <option value="">TokoPedia</option>
+                    <option value="">DANA</option>
+                    <option value="">LinkAja</option>
+                    <option value="" selected="selected">Select subject</option>
+                  </select>
+                  <label class="labelpayment" for="transferbank">Transfer Bank</label>
+                  <select class="dropdown" name="transferbank" id="transferbank">
+                    <option value="">Bank BCA</option>
+                    <option value="">Bank BRI</option>
+                    <option value="">Bank Syariah Indonesia (BSI)</option>
+                    <option value="">Bank Mandiri</option>
+                    <option value="">Bank BNI</option>
+                    <option value="">Bank Lainnya</option>
+                    <option value="" selected="selected">Select subject</option>
+                  </select>
+                  <label class="labelpayment" for="transferbank">Bayar Tunai di Mitra/Agen</label>
+                  <select class="dropdown" name="subject" id="subject">
+                    <option value="">Agen BRILink</option>
+                    <option value="">BNI Agen46</option>
+                    <option value="">Alfamart/Alfamidi/Dan+Dan</option>
+                    <option value="">Indomaret</option>
+                    <option value="" selected="selected">Select subject</option>
+                  </select>
                 </div>
               </div>
               <label> <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing </label>
@@ -104,6 +106,7 @@
         </div>
       </div>
     </form>
+    <script src="JS/checkout.js"></script>
     <script src="JS/script.js"></script>
   </body>
 </html>
