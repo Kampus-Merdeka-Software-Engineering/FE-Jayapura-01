@@ -23,7 +23,7 @@ body {
 /*  NAVBAR */
 /* ======== */
 header {
-  background-color: gray;
+  background-color: var(--primary);
   color: #fff;
   padding: 10px;
   display: flex;
@@ -58,7 +58,7 @@ header {
   font-size: 18px;
 }
 
-.account-bar .nav-link{
+.account-bar .nav-link {
   display: none;
 }
 
@@ -400,7 +400,7 @@ ul {
 
   /* RESPONSIVE NAVBAR */
   header {
-    background-color: gray;
+    background-color: var(--primary);
     color: #fff;
     padding: 10px;
     display: flex;
@@ -457,7 +457,7 @@ ul {
     color: #45f5b4;
   }
 
-  .nav-list li a{
+  .nav-list li a {
     margin: auto;
     text-align: left;
     padding-left: 20px;
@@ -465,15 +465,15 @@ ul {
     transition: all 0.3s;
   }
 
-  .btn-navbar{
+  .btn-navbar {
     display: none;
   }
 
-  .account-bar .nav-link{
+  .account-bar .nav-link {
     display: flex;
   }
 
-  .account-bar a{
+  .account-bar a {
     padding: 0;
     margin: 0;
     padding-bottom: 20px;
