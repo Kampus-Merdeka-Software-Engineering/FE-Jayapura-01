@@ -1,11 +1,30 @@
-.icon-back a i{
-  font-size: 27px;
-  text-decoration: none;
-  color: #fff;
+.header {
+  display: flex;
+  width: 100%;
 }
 
-.icon-back a i:hover{
-  color: #04aa6d;
+.header h1 {
+  margin-left: 40%;
+}
+
+.icon-back a i {
+  font-size: 27px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  /* background-color: #333; */
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-left: 40%;
+  margin-top: 10%;
+  border-radius: 2px;
+}
+
+.icon-back a i:hover {
+  color: white;
+  background-color: #299c80;
 }
 
 .rowcheckout {
@@ -28,8 +47,8 @@ h2 {
 
 .col-25 {
   -ms-flex: 15%; /* IE10 */
-  flex: 25%;
-  margin-right: 20px;
+  flex: 10%;
+  margin-left: 20px;
   margin-top: 10px;
 }
 
@@ -86,7 +105,7 @@ label {
 }
 
 .btn {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: #04aa6d;
   color: white;
   padding: 12px;
@@ -100,7 +119,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #299c80;
 }
 
 span.price {
