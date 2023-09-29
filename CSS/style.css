@@ -389,10 +389,11 @@ ul {
 
 /* Media Queries */
 /* Tablet */
-@media (max-width: 912px) {
+@media (max-width: 768px) {
+  /* RESPONSIVE VIDEO */
   .video_opening {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     padding-top: 69px;
     position: relative;
     overflow: hidden;
@@ -483,17 +484,6 @@ ul {
     box-shadow: none;
     padding-top: 0;
     padding-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* RESPONSIVE VIDEO */
-  .video_opening {
-    width: 100%;
-    height: 60vh;
-    padding-top: 69px;
-    position: relative;
-    overflow: hidden;
   }
 
   /* RESPONSIVE FOOTER */
