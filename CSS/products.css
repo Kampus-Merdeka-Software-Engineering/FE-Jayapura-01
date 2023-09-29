@@ -168,6 +168,10 @@ html {
   align-items: center;
 }
 
+.decrement:hover{
+  background-color: #469483;
+}
+
 /* Styling untuk tombol increment */
 .increment {
   background-color: var(--primary);
@@ -180,6 +184,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.increment:hover{
+  background-color: #469483;
 }
 
 /* Styling Quantity*/
@@ -226,10 +234,19 @@ html {
   color: #add6cb;
 }
 
+.card .checkout div:hover{
+  background-color: #70a593;
+  color: #12201d;
+}
+
 .card .checkout div:nth-child(2) {
   background-color: #12201d;
   color: var(--muda);
   font-weight: 300;
+}
+
+.card .checkout div:nth-child(2):hover{
+  background-color: #1f312e;
 }
 
 .active .card {
@@ -257,7 +274,9 @@ html {
   width: auto;
   height: 2rem;
   padding-right: 5px;
+  border-radius: 5px;
 }
+
 /* ================== */
 /* shopping cart end */
 /* ================== */
