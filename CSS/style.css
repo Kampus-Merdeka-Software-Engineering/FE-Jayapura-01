@@ -102,6 +102,11 @@ header {
   color: var(--muda);
 }
 
+svg {
+  margin-bottom: -5px;
+  margin-right: 1px;
+}
+
 .nav-list a {
   color: #e2ede9;
   padding: 15px;
