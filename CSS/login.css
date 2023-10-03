@@ -19,7 +19,9 @@ body {
     padding: 50px;
 }
 
+/* ===== */
 /* form */
+/* ===== */
 .form-container {
     background-color: var(--primary);
     border-radius: 5px;
