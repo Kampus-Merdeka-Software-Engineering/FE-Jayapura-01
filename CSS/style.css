@@ -109,7 +109,7 @@ svg {
 
 .nav-list a {
   color: #e2ede9;
-  padding: 15px;
+  padding: 13px;
   font-weight: 500;
 }
 
@@ -117,10 +117,10 @@ svg {
   color: #45f5b4;
 }
 
-.login {
+.loginn {
   background-color: var(--primary);
   border-radius: 50%;
-  padding: 5px;
+  padding: 2px;
   padding-bottom: 1px;
   color: var(--muda);
   text-decoration: none;
@@ -129,19 +129,18 @@ svg {
   z-index: 10000;
 }
 
-.login:hover {
+.loginn:hover {
   background-color: #45f5b4;
   color: var(--primary);
   z-index: 10000;
   border-radius: 50%;
   height: 35px;
-  width: 35px;
+  width: 34px;
   padding-bottom: 5px;
-  margin-right: 1.5px;
+  margin-right: 1px;
 }
 
-.login i {
-  padding-right: 5px;
+.loginn i {
   z-index: 10000;
   font-size: 35px;
 }
