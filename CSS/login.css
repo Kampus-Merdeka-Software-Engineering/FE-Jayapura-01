@@ -113,6 +113,7 @@ label {
     font-weight: 700;
     font-size: 15px;
     color: var(--primary);
+    text-align: left;
 }
 
 input[type="text"],
@@ -139,7 +140,7 @@ select {
     margin-right: 10px;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     background-color: var(--primary);
     border: 1px solid #4af3b5;
     color: var(--muda);
@@ -156,7 +157,7 @@ button[type="submit"] {
     width: 30% auto;
 }
 
-button[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #37a77d;
 }
 
