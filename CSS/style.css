@@ -121,33 +121,33 @@ svg {
 .loginnn {
   background-color: var(--primary);
   border: 2px solid #4af3b5;
-  border-radius: 5px;
+  border-radius: 30px;
   color: var(--muda);
   padding: 5px 20px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center; /* Mengatur teks ke posisi tengah secara vertikal */
+  justify-content: center; /* Mengatur teks ke posisi tengah secara horizontal */
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
-  text-decoration: none;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .loginnn:hover {
   background-color: #37a77d;
 }
 
-.btn-navbar i{
+.btn-navbar i {
   z-index: 10000;
   font-size: 20px;
   padding-right: 8px;
 }
 
-.btn-navbar a button{
+.btn-navbar a button {
   z-index: 10000;
   font-size: 15px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 /* ======= */
@@ -402,13 +402,13 @@ ul {
 }
 
 /* Copyright */
-.garis-footer{
+.garis-footer {
   color: #e2ede9;
   height: 1px;
   width: 100%;
 }
 
-.copyright p{
+.copyright p {
   background-color: #1e463b;
   color: #e2ede9;
   bottom: 0;
