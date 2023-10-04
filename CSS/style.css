@@ -117,27 +117,29 @@ svg {
   color: #45f5b4;
 }
 
-.loginn {
-  background-color: var(--primary);
-  border-radius: 50%;
-  padding: 2px;
-  padding-bottom: 1px;
-  color: var(--muda);
-  text-decoration: none;
-  cursor: pointer;
-  text-decoration: none;
+/* Sign in button */
+.btn-navbar{
   z-index: 10000;
+  text-decoration: none;
+  padding: 10px;
+  padding-bottom: 10px;
+  width: 90px;
+  height: 35px;
+  background: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #1e463b;
 }
 
-.loginn:hover {
+.btn-navbar:hover {
   background-color: #45f5b4;
   color: var(--primary);
   z-index: 10000;
-  border-radius: 50%;
-  height: 35px;
-  width: 34px;
-  padding-bottom: 5px;
-  margin-right: 1px;
+}
+
+.btn-navbar a button i [data-feather=user]{
+  background: none;
+  background-color: #333;
 }
 
 .loginn i {
