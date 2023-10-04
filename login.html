@@ -38,66 +38,30 @@
             <br>
             <div class="form-container">
                 <h2>LOGIN</h2>
-                <p>Welcome Back, please login to your account</p> <br>
-
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <div class="input-group">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <div class="input-group">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
 
                 <br>
                 <input type="submit" value="Login" class="btn" id="buttonLogin">
 
-                <p>New Customer? <a href="register.html">Create Account</a></p>
+                <br> <br>
+
+                <div class="redirect">
+                    <p>New Customer? <a href="register.html">Create Account</a></p>
+                </div>
                 </form>
 
             </div>
         </div>
     </section>
-    <script>
-        var btn = document.getElementById("buttonLogin")
-var username = document.getElementById("username")
-var password = document.getElementById("password")
-
-btn.addEventListener("click", login);
-
-function login() {
-    fetch("http://localhost:3000/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                username: username.value,
-                password: password.value,
-            })
-        })
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-            return Promise.reject(response);
-        }).then(function (data) {
-            alert(data.message);
-            localStorage.setItem("user", JSON.stringify(data.data))
-            window.location.replace("http://localhost:3000/static/index.html")
-        }).catch(function (error) {
-            console.log(error);
-        });
-}
-    </script>
 </body>
 
 </html>
