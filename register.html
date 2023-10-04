@@ -32,10 +32,8 @@
                 <h2>REGISTER</h2>
                 <p>Hello, create your account and enjoy it!!</p> <br>
 
-                <form action="products.html" method="POST">
-
                     <div class="form-group">
-                        <label for="password">Username</label>
+                        <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your username" required>
                     </div>
                     
@@ -50,12 +48,55 @@
                     </div>
         
                     <br>
-                    <button type="submit">Register</button>
+                    <input type="submit" value="Register" class="btn" id="buttonRegister">
 
-                    <p>Already have account? <a href="login.html">Login</a></p>
+                    <p>Already have account? <a href="http://localhost:3000/static/login.html">Login</a></p>
                 </form>
             </div>
         </div>
     </section>
+    <script>
+        var btn = document.getElementById("buttonRegister");
+        var username = document.getElementById("username");
+        var email = document.getElementById("email"); // Mendapatkan elemen input email
+        var password = document.getElementById("password");
+
+btn.addEventListener("click", register);
+
+function register(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+    // Mengambil nilai input dari elemen-elemen HTML
+    var usernameValue = username.value;
+    var emailValue = email.value;
+    var passwordValue = password.value;
+
+    // Mengeksekusi permintaan HTTP POST ke server untuk melakukan registrasi
+    fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            username: usernameValue,
+            email: emailValue, // Menggunakan emailValue yang telah diambil dari input email
+            password: passwordValue,
+        })
+    })
+    .then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        return Promise.reject(response);
+    })
+    .then(function (data) {
+        alert(data.message);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+}
+
+    </script>
 </body>
 </html>
