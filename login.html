@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,10 @@
     <!-- icon fontawesome-->
     <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
 
+    <!-- Box icons -->
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <!-- logo tab -->
     <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
 
@@ -25,7 +30,10 @@
 <body>
     <!-- login -->
     <section class="login">
-        
+        <div class="icon-back">
+            <a href="index.html"><i class="bx bx-arrow-back"></i></a>
+        </div>
+
         <div class="sign-up">
             <br>
             <div class="form-container">
@@ -33,55 +41,32 @@
                 <p>Welcome Back, please login to your account</p> <br>
 
 
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Username" maxlength="15" required>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
-        
-                    <div class="form-group">
-                        <label for="password">Password</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
                         <input type="password" id="password" name="password" placeholder="Enter your password" required>
                     </div>
+                </div>
 
-                    <br>
-                    <input type="submit" value="Login" class="btn" id="buttonLogin">
+                <br>
+                <input type="submit" value="Login" class="btn" id="buttonLogin">
 
-                    <p>New Customer? <a href="http://localhost:3000/static/register.html">Create Account</a></p>
+                <p>New Customer? <a href="register.html">Create Account</a></p>
                 </form>
+
             </div>
         </div>
     </section>
-    <script>
-        var btn = document.getElementById("buttonLogin")
-var username = document.getElementById("username")
-var password = document.getElementById("password")
-
-btn.addEventListener("click", login);
-
-function login() {
-    fetch("http://localhost:3000/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                username: username.value,
-                password: password.value,
-            })
-        })
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-            return Promise.reject(response);
-        }).then(function (data) {
-            alert(data.message);
-            localStorage.setItem("user", JSON.stringify(data.data))
-            window.location.replace("http://localhost:3000/static/index.html")
-        }).catch(function (error) {
-            console.log(error);
-        });
-}
-    </script>
+    
 </body>
+
 </html>
