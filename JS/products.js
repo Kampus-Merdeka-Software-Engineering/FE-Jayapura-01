@@ -186,8 +186,6 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
   document.querySelector(".quantity").textContent = cartQuantity.toString();
 }
 
-
-
 //add event to button add-to-cart
 document.querySelector(".menu-item").addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart-button")) {
@@ -262,6 +260,6 @@ function redirectToPage() {
   if (cartQuantity > 0) {
     window.location.href = "checkout.html";
   } else {
-    alert("Shopping cart is empty. Add items to the cart before checkout.");
+    alert("Shopping cart is empty. Add items to the cart before checkout!!");
   }
 }

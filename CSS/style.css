@@ -329,7 +329,8 @@ ul {
 
 .footer {
   background-color: var(--primary);
-  padding: 70px 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .footer-col {
@@ -393,6 +394,24 @@ ul {
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #2ccea0;
+}
+
+/* Copyright */
+.garis-footer{
+  color: #e2ede9;
+  height: 1px;
+  width: 100%;
+}
+
+.copyright p{
+  background-color: #1e463b;
+  color: #e2ede9;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 /* Media Queries */
