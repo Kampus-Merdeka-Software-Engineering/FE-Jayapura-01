@@ -51,13 +51,6 @@ body {
     color: var(--primary);
 }
 
-.form-container p {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 13px;
-    text-align: center;
-}
-
 form p a {
     color: #1E463B;
     font-weight: bolder;
@@ -73,38 +66,16 @@ form {
     color: var(--muda);
 }
 
-/* Icon styling */
-.input-group {
-    position: relative;
-}
-
-.input-group i {
-    flex: 1;
+/* Placeholder */
+.form-group input::placeholder {
     position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--primary);
-}
-
-/* Input styling */
-.input-group input {
-    flex: 5;
-    left: 90px;
-    font-weight: 700;
-}
-
-/* Placeholder styling */
-.input-group input::placeholder {
-    position: absolute;
-    left: 40px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--primary);
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 12px;
-    transition: top 0.3s;
 }
 
 label {
@@ -155,6 +126,7 @@ input[type="submit"] {
     text-decoration: none;
     font-family: 'Poppins';
     width: 30% auto;
+    float: left;
 }
 
 input[type="submit"]:hover {
@@ -163,6 +135,6 @@ input[type="submit"]:hover {
 
 .redirect p {
     text-align: left;
-    padding-top: 3px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 12px;
 }
