@@ -76,7 +76,7 @@ header {
 
 .nav-list a:hover {
   box-shadow: 0 -3px 0px #fff inset, 500px 0 0 rgba(255, 255, 255, 0.03) inset;
-  padding: 35px 15px 20px 15px;
+  padding: 35px 16px 22px 16px;
 }
 
 .logo {
@@ -120,14 +120,14 @@ svg {
 /* login button */
 .loginnn {
   background-color: var(--primary);
-  border: 2px solid #4af3b5;
+  border: 2px solid var(--muda);
   border-radius: 30px;
   color: var(--muda);
   padding: 5px 20px;
   text-decoration: none;
   display: flex;
-  align-items: center; /* Mengatur teks ke posisi tengah secara vertikal */
-  justify-content: center; /* Mengatur teks ke posisi tengah secara horizontal */
+  align-items: center; 
+  justify-content: center; 
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
@@ -135,7 +135,8 @@ svg {
 }
 
 .loginnn:hover {
-  background-color: #37a77d;
+  background-color: var(--muda);
+  color: #1e463b;
 }
 
 .btn-navbar i {
