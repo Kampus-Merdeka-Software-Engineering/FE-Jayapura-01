@@ -120,7 +120,7 @@ svg {
 /* login button */
 .loginnn {
   background-color: var(--primary);
-  border: 2px solid #4af3b5;
+  border: 2px solid var(--muda);
   border-radius: 30px;
   color: var(--muda);
   padding: 5px 20px;
@@ -135,7 +135,8 @@ svg {
 }
 
 .loginnn:hover {
-  background-color: #37a77d;
+  background-color: var(--muda);
+  color: #1e463b;
 }
 
 .btn-navbar i {
