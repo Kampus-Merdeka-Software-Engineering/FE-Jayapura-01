@@ -76,7 +76,7 @@ header {
 
 .nav-list a:hover {
   box-shadow: 0 -3px 0px #fff inset, 500px 0 0 rgba(255, 255, 255, 0.03) inset;
-  padding: 35px 15px 20px 15px;
+  padding: 35px 16px 22px 16px;
 }
 
 .logo {
@@ -126,8 +126,8 @@ svg {
   padding: 5px 20px;
   text-decoration: none;
   display: flex;
-  align-items: center; /* Mengatur teks ke posisi tengah secara vertikal */
-  justify-content: center; /* Mengatur teks ke posisi tengah secara horizontal */
+  align-items: center; 
+  justify-content: center; 
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
