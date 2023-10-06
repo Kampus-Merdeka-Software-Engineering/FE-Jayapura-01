@@ -123,7 +123,10 @@ svg {
   border: 2px solid var(--muda);
   border-radius: 30px;
   color: var(--muda);
-  padding: 5px 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 10px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -141,7 +144,7 @@ svg {
 
 .btn-navbar i {
   z-index: 10000;
-  font-size: 20px;
+  font-size: 30px;
   padding-right: 8px;
 }
 

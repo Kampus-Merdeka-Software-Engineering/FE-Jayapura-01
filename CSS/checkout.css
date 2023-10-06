@@ -71,7 +71,7 @@ h2 {
   flex: 25%;
   margin-top: -10px;
   margin-bottom: -10px;
-  background-color: var(--primary);
+  background-color: var(--muda);
   color: var(--muda);
   border-radius: 10px;
 }
@@ -79,6 +79,7 @@ h2 {
 .col-50 h3{
   text-align: center;
   font-size: 23px;
+  color: #1c6654;
 }
 
 .col-75 {
@@ -102,6 +103,7 @@ input[type="text"] {
   background-color: #bed1cc;
   color: var(--primary);
   font-family: 'Poppins';
+  border: 2px solid #1e463b;
 }
 
 input::placeholder{
@@ -111,6 +113,7 @@ input::placeholder{
 label {
   margin-bottom: 10px;
   display: block;
+  color: #1e463b;
 }
 
 .icon-container {
@@ -121,7 +124,7 @@ label {
 
 .btn {
   font-family: "Poppins";
-  background-color: var(--primary);
+  background-color: #3c9780;
   color: var(--muda);
   font-weight: bold;
   padding: 12px;
@@ -159,6 +162,7 @@ option {
   padding: 5px;
   color: var(--primary);
   background-color: #bed1cc;
+  border: 2px solid #1e463b;
 }
 
 .dropdown option value:hover{
