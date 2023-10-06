@@ -142,6 +142,10 @@ svg {
   color: #1e463b;
 }
 
+.btn-navbar{
+  display: flex;
+}
+
 .btn-navbar i {
   z-index: 10000;
   font-size: 30px;
@@ -154,6 +158,25 @@ svg {
   font-family: "Poppins";
 }
 
+.btn-navbar a {
+  text-decoration: none;
+  color: var(--muda); 
+}
+
+.logout-button{
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  right: 0;
+  border-radius: 50%;
+}
+
+.logout-button:hover{
+  background-color: var(--muda);
+  color: var(--primary);
+}
 /* ======= */
 /* Video */
 /* ======= */
