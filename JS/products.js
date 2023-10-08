@@ -15,7 +15,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 3000); // Change after 3 second
+  setTimeout(showSlides, 3001); // Change after 3 second
 }
 
 function plusSlides(n) {
@@ -41,13 +41,13 @@ function showSlide(n) {
 }
 
 // =============
-//fetching json
+//fetching products from database
 // =============
-fetch("assets/products.json")
+fetch("http://localhost:3001/products")
   .then((response) => response.json())
   .then((data) => {
     // Loop melalui data produk dan tambahkan setiap produk ke dalam DOM
-    data.products.forEach((product) => {
+    data.forEach((product) => {
       addProductToDOM(product);
     });
   });
@@ -107,7 +107,6 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
     const currentQuantity = parseInt(quantityDisplay.textContent);
     quantityDisplay.textContent = (currentQuantity + 1).toString();
   } else {
-
     const cartItem = document.createElement("li");
     cartItem.classList.add("cart-item");
     cartItem.dataset.productName = itemName;
@@ -148,17 +147,16 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
         cartQuantity--;
         const cartIcon = document.querySelector(".quantity");
         cartIcon.textContent = cartQuantity.toString();
-      
+
         // Perbarui tampilan jumlah produk di keranjang
         document.querySelector(".total").textContent = `Rp. ${cartTotal}`;
       }
-      
     });
     itemQuantity.appendChild(decrementButton);
     //Deafult jumlah barang
     const quantityDisplay = document.createElement("span");
     quantityDisplay.textContent = "1";
-    quantityDisplay.classList.add("quantity-display")
+    quantityDisplay.classList.add("quantity-display");
     itemQuantity.appendChild(quantityDisplay);
 
     const incrementButton = document.createElement("button");
@@ -189,17 +187,99 @@ function addToCartAndUpdate(itemName, itemPrice, itemImageSrc) {
 //add event to button add-to-cart
 document.querySelector(".menu-item").addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart-button")) {
+    //cek apakah user sudah login
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Silahkan login untuk aksi ini!");
+      return;
+    }
+
+    //jika pengguna sudah login lanjut seperti biasa
     const productDiv = event.target.closest(".menu-items"); // Mencari elemen terdekat dengan class "menu-items"
     if (productDiv) {
       const productName = productDiv.querySelector("h3").textContent;
       const productPriceText = productDiv.querySelector("p").innerText;
-      const cleanedPriceText = productPriceText.replace("Rp. ", "").replace(",", "");
+      const cleanedPriceText = productPriceText
+        .replace("Rp. ", "")
+        .replace(",", "");
       const productPrice = parseFloat(cleanedPriceText);
       const productImageSrc = productDiv.querySelector("img").src;
 
       addToCartAndUpdate(productName, productPrice, productImageSrc);
     }
   }
+});
+
+//Fetch to backend for processing shopping cart
+const checkoutButton = document.querySelector(".checkout");
+
+checkoutButton.addEventListener("click", function () {
+  const cartItemPrevious = Array.from(document.querySelectorAll(".cart-item"));
+
+  console.log(cartItemPrevious);
+
+  const cartItems = Array.from(document.querySelectorAll(".cart-item")).map(
+    (item) => {
+      const productName = item.dataset.productName;
+      const itemPriceElement = item.querySelector(".item-price"); // Sesuaikan dengan atribut yang digunakan pada elemen HTML
+      const quantityDisplayElement = item.querySelector(".quantity-display");
+
+      if (itemPriceElement && quantityDisplayElement) {
+        const itemPrice = parseFloat(
+          itemPriceElement.textContent.replace("Rp. ", "")
+        );
+        const quantity = parseInt(quantityDisplayElement.textContent);
+        return {
+          nama_barang: productName, // Sesuaikan dengan atribut yang diharapkan oleh server
+          harga: itemPrice, // Sesuaikan dengan atribut yang diharapkan oleh server
+          quantity,
+        };
+      } else {
+        return null;
+      }
+    }
+  );
+
+  console.log("Cart Items:", cartItems);
+
+  const validCartItems = cartItems.filter((item) => item !== null);
+  const token = localStorage.getItem("token");
+
+  console.log("Valid Cart Items:", validCartItems);
+
+  if (validCartItems.length === 0) {
+    alert(
+      "Keranjang belanja kosong. Tambahkan produk ke keranjang terlebih dahulu."
+    );
+    return;
+  }
+
+  const cartData = {
+    items: validCartItems,
+  };
+
+  fetch("http://localhost:3001/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(cartData),
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      alert(data.message);
+      document.querySelector(".cart-list").innerHTML = "";
+      document.querySelector(".total").textContent = "Rp. 0";
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
 
 // Open and Close Shopping Cart
@@ -258,8 +338,8 @@ categoryOptions.forEach((option) => {
 // berpindah halaman ke checkout.html
 function redirectToPage() {
   if (cartQuantity > 0) {
-    window.location.href = "checkout.html";
+    window.location.href = "http://localhost:3001/static/checkout.html";
   } else {
-    alert("Shopping cart is empty. Add items to the cart before checkout!!");
+    alert("Shopping cart is empty. Add items to the cart before checkout.");
   }
 }
