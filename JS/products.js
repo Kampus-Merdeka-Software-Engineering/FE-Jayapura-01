@@ -214,10 +214,8 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
 const checkoutButton = document.querySelector(".checkout");
 
 checkoutButton.addEventListener("click", function () {
-  const cartItemPrevious = Array.from(document.querySelectorAll(".cart-item"));
-
-  console.log(cartItemPrevious);
-
+  const cartList = document.querySelector(".cart-list");
+  console.log(cartList);
   const cartItems = Array.from(document.querySelectorAll(".cart-item")).map(
     (item) => {
       const productName = item.dataset.productName;
