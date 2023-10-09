@@ -1,3 +1,87 @@
+// ======
+// Login 
+// ======
+var btn = document.getElementById("buttonLogin")
+var username = document.getElementById("username")
+var password = document.getElementById("password")
+
+btn.addEventListener("click", login);
+
+function login() {
+  fetch("https://be-jayapura-01-production.up.railway.app/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: username.value,
+      password: password.value,
+    })
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    }).then(function (data) {
+      alert(data.message);
+      const user = data.data.user; // Data pengguna
+      const token = data.data.token; // Token
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      window.location.replace("index.html")
+    }).catch(function (error) {
+      console.log(error);
+    });
+}
+
+// =========
+// Register
+// =========
+var btn = document.getElementById("buttonRegister");
+var username = document.getElementById("username");
+var email = document.getElementById("email"); // Mendapatkan elemen input email
+var password = document.getElementById("password");
+
+btn.addEventListener("click", register);
+
+function register(event) {
+  event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+  // Mengambil nilai input dari elemen-elemen HTML
+  var usernameValue = username.value;
+  var emailValue = email.value;
+  var passwordValue = password.value;
+
+  // Mengeksekusi permintaan HTTP POST ke server untuk melakukan registrasi
+  fetch("https://be-jayapura-01-production.up.railway.app/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: usernameValue,
+      email: emailValue, // Menggunakan emailValue yang telah diambil dari input email
+      password: passwordValue,
+    })
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      alert(data.message);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+// =============
+// Login Logout
+// =============
 const user = JSON.parse(localStorage.getItem("user"));
 const token = localStorage.getItem("token");
 const loginButton = document.querySelector(".loginnn");

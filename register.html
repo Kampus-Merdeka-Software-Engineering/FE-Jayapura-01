@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,71 +40,31 @@
                 <h2>REGISTER</h2>
                 <p>Hello, create your account and enjoy it!!</p> <br>
 
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-        
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
-        
-                    <br>
-                    <input type="submit" value="Register" class="btn" id="buttonRegister">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
 
-                    <p>Already have account? <a href="login.html">Login</a></p>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <br>
+                <input type="submit" value="Register" class="btn" id="buttonRegister">
+
+                <p>Already have account? <a href="login.html">Login</a></p>
                 </form>
             </div>
         </div>
     </section>
-    <script>
-        var btn = document.getElementById("buttonRegister");
-        var username = document.getElementById("username");
-        var email = document.getElementById("email"); // Mendapatkan elemen input email
-        var password = document.getElementById("password");
 
-btn.addEventListener("click", register);
-
-function register(event) {
-    event.preventDefault(); // Mencegah pengiriman formulir secara default
-
-    // Mengambil nilai input dari elemen-elemen HTML
-    var usernameValue = username.value;
-    var emailValue = email.value;
-    var passwordValue = password.value;
-
-    // Mengeksekusi permintaan HTTP POST ke server untuk melakukan registrasi
-    fetch("https://be-jayapura-01-production.up.railway.app/register", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            username: usernameValue,
-            email: emailValue, // Menggunakan emailValue yang telah diambil dari input email
-            password: passwordValue,
-        })
-    })
-    .then(function (response) {
-        if (response.ok) {
-            return response.json();
-        }
-        return Promise.reject(response);
-    })
-    .then(function (data) {
-        alert(data.message);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-}
-
-    </script>
+    <script src="JS/login_logout.js"></script>
 </body>
+
 </html>
