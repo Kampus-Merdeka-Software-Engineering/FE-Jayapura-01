@@ -43,7 +43,7 @@ function showSlide(n) {
 // =============
 //fetching products from database
 // =============
-fetch("http://localhost:3001/products")
+fetch("http://be-jayapura-01-production.up.railway.app/products")
   .then((response) => response.json())
   .then((data) => {
     // Loop melalui data produk dan tambahkan setiap produk ke dalam DOM
@@ -256,7 +256,7 @@ checkoutButton.addEventListener("click", function () {
     items: validCartItems,
   };
 
-  fetch("http://localhost:3001/checkout", {
+  fetch("http://be-jayapura-01-production.up.railway.app/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -336,7 +336,8 @@ categoryOptions.forEach((option) => {
 // berpindah halaman ke checkout.html
 function redirectToPage() {
   if (cartQuantity > 0) {
-    window.location.href = "http://localhost:3001/static/checkout.html";
+    window.location.href =
+      "http://be-jayapura-01-production.up.railway.app/static/checkout.html";
   } else {
     alert("Shopping cart is empty. Add items to the cart before checkout.");
   }
