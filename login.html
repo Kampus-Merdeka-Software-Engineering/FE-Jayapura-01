@@ -14,10 +14,6 @@
     <!-- icon fontawesome-->
     <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
 
-    <!-- Box icons -->
-    <link rel="stylesheet" href="boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
     <!-- logo tab -->
     <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
 
@@ -30,35 +26,29 @@
 <body>
     <!-- login -->
     <section class="login">
-        <div class="icon-back">
-            <a href="index.html"><i class="bx bx-arrow-back"></i></a>
-        </div>
 
         <div class="sign-up">
             <br>
             <div class="form-container">
                 <h2>LOGIN</h2>
+                <p>Welcome Back, please login to your account</p> <br>
+
 
                 <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Username" maxlength="15" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="password"><i class="fas fa-lock"></i> Password </label>
+                    <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
 
                 <br>
                 <input type="submit" value="Login" class="btn" id="buttonLogin">
 
-                <br> <br>
-
-                <div class="redirect">
-                    <p>New Customer? <a href="register.html">Create Account</a></p>
-                </div>
+                <p>New Customer? <a href="https://be-jayapura-01-production.up.railway.app/register.html">Create Account</a></p>
                 </form>
-
             </div>
         </div>
     </section>
@@ -70,7 +60,7 @@
         btn.addEventListener("click", login);
 
         function login() {
-            fetch("http://be-jayapura-01-production.up.railway.app/login", {
+            fetch("https://be-jayapura-01-production.up.railway.app/login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -91,7 +81,7 @@
                     const token = data.data.token; // Token
                     localStorage.setItem("token", token);
                     localStorage.setItem("user", JSON.stringify(user));
-                    window.location.replace("http://be-jayapura-01-production.up.railway.app/index.html")
+                    window.location.replace("https://be-jayapura-01-production.up.railway.app/index.html")
                 }).catch(function (error) {
                     console.log(error);
                 });
