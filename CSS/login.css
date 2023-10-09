@@ -66,6 +66,10 @@ form {
     color: var(--muda);
 }
 
+.redirect{
+    text-align: left;
+}
+
 /* Placeholder */
 .form-group input::placeholder {
     position: absolute;
