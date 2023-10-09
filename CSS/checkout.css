@@ -32,9 +32,11 @@
 }
 
 .rowcheckout {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
+  /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
+  /* IE10 */
   flex-wrap: wrap;
   overflow: hidden;
   margin-bottom: 15px;
@@ -52,7 +54,8 @@ h4 {
 }
 
 .col-25 {
-  -ms-flex: 15%; /* IE10 */
+  -ms-flex: 15%;
+  /* IE10 */
   flex: 10%;
   margin-left: 20px;
   margin-right: 20px;
@@ -63,7 +66,8 @@ h4 {
 }
 
 .col-50 {
-  -ms-flex: 50%; /* IE10 */
+  -ms-flex: 50%;
+  /* IE10 */
   flex: 25%;
   margin-top: -10px;
   margin-bottom: -10px;
@@ -79,7 +83,8 @@ h4 {
 }
 
 .col-75 {
-  -ms-flex: 75%; /* IE10 */
+  -ms-flex: 75%;
+  /* IE10 */
   flex: 50%;
   margin-bottom: -20px;
   border-radius: 10px;
@@ -171,6 +176,7 @@ option {
   cursor: pointer;
   margin-right: -30px;
 }
+
 .shopping span {
   position: relative;
   width: 20px;
@@ -186,6 +192,7 @@ option {
   padding-left: 6px;
   padding-top: 1px;
 }
+
 .shopping {
   display: grid;
   grid-template-columns: 50fr 1fr 1fr;
@@ -277,18 +284,22 @@ option {
 .increment:hover {
   background-color: #469483;
 }
+
 @media (max-width: 900px) {
   .rowcheckout {
     flex-direction: column;
   }
+
   .col-25 {
     order: 1;
   }
+
   .col-50 {
     order: 2;
     width: 100%;
     padding-bottom: 20px;
   }
+
   .col-75 {
     order: 3;
     width: 100%;
@@ -299,6 +310,7 @@ option {
   .row {
     flex-direction: column-reverse;
   }
+
   .col-25 {
     margin-bottom: 20px;
   }
