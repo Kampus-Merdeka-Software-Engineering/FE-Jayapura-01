@@ -264,45 +264,6 @@ categoryOptions.forEach((option) => {
   });
 });
 
-// Tambahkan item ke keranjang belanja
-cartItems.push({
-  name: itemName,
-});
-
-// Fungsi untuk mengirim keranjang belanja ke server
-function sendCartToServer(cartItems) {
-  const token = localStorage.getItem("token");
-
-  // Persiapkan data keranjang belanja yang akan dikirimkan ke server
-  const cartData = {
-    items: cartItems,
-  };
-
-  fetch("https://be-jayapura-01-production.up.railway.app/checkout", {
-    // Sesuaikan dengan endpoint Anda
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify(cartData),
-  })
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      return Promise.reject(response);
-    })
-    .then(function (data) {
-      alert(data.message);
-      document.querySelector(".cart-list").innerHTML = "";
-      document.querySelector(".total").textContent = "Rp. 0";
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-
 // Fungsi untuk mengarahkan pengguna ke halaman checkout jika keranjang tidak kosong
 function redirectToPage() {
   if (cartQuantity > 0) {
