@@ -214,7 +214,6 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
 // Fungsi untuk mengarahkan pengguna ke halaman checkout jika keranjang tidak kosong
 function redirectToPage() {
   if (cartQuantity > 0) {
-    sendCartToServer(cartItems); // Mengirim data keranjang belanja ke server
     window.location.href = "checkout.html";
   } else {
     alert("Shopping cart is empty. Add items to the cart before checkout.");
