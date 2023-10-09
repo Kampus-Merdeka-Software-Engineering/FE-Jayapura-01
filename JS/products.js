@@ -211,6 +211,16 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
   }
 });
 
+// Fungsi untuk mengarahkan pengguna ke halaman checkout jika keranjang tidak kosong
+function redirectToPage() {
+  if (cartQuantity > 0) {
+    sendCartToServer(cartItems); // Mengirim data keranjang belanja ke server
+    window.location.href = "checkout.html";
+  } else {
+    alert("Shopping cart is empty. Add items to the cart before checkout.");
+  }
+}
+
 // Open and Close Shopping Cart
 const shoppingCart = document.querySelector(".shopping img");
 const closeShoppingCart = document.querySelector(".closeShopping");
@@ -263,13 +273,3 @@ categoryOptions.forEach((option) => {
     filterProducts(selectedCategory);
   });
 });
-
-// Fungsi untuk mengarahkan pengguna ke halaman checkout jika keranjang tidak kosong
-function redirectToPage() {
-  if (cartQuantity > 0) {
-    sendCartToServer(cartItems); // Mengirim data keranjang belanja ke server
-    window.location.href = "checkout.html";
-  } else {
-    alert("Shopping cart is empty. Add items to the cart before checkout.");
-  }
-}
