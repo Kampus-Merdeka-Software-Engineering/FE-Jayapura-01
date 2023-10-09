@@ -26,3 +26,16 @@ window.onload = function () {
   };
 };
 // close function dropdown
+
+//Alert Checkout
+document.addEventListener("DOMContentLoaded", function () {
+  // Temukan tombol "Checkout" berdasarkan kelas "btn"
+  const checkoutButton = document.querySelector(".btn[value='Checkout']");
+
+  // Tambahkan event listener untuk menangani klik pada tombol Checkout
+  checkoutButton.addEventListener("click", function (event) {
+    // Tampilkan pesan alert
+    alert("Your order has been received");
+    window.location.href = "products.html";
+  });
+});
