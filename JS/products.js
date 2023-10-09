@@ -307,7 +307,7 @@ function sendCartToServer(cartItems) {
 function redirectToPage() {
   if (cartQuantity > 0) {
     sendCartToServer(cartItems); // Mengirim data keranjang belanja ke server
-    window.location.href = "http://localhost:3000/checkout.html";
+    window.location.href = "checkout.html";
   } else {
     alert("Shopping cart is empty. Add items to the cart before checkout.");
   }
