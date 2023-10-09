@@ -15,7 +15,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 3001); // Change after 3 second
+  setTimeout(showSlides, 3000); // Change after 3 second
 }
 
 function plusSlides(n) {
@@ -43,7 +43,7 @@ function showSlide(n) {
 // =============
 //fetching products from database
 // =============
-fetch("http://be-jayapura-01-production.up.railway.app/products")
+fetch("http://https://be-jayapura-01-production.up.railway.app//products")
   .then((response) => response.json())
   .then((data) => {
     // Loop melalui data produk dan tambahkan setiap produk ke dalam DOM
@@ -90,6 +90,7 @@ function addProductToDOM(product) {
 // ===============
 let cartTotal = 0;
 let cartQuantity = 0;
+let cartItems = [];
 
 const list = document.querySelector(".card .list");
 
@@ -210,76 +211,6 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
   }
 });
 
-//Fetch to backend for processing shopping cart
-const checkoutButton = document.querySelector(".checkout");
-
-checkoutButton.addEventListener("click", function () {
-  const cartList = document.querySelector(".cart-list");
-  console.log(cartList);
-  const cartItems = Array.from(document.querySelectorAll(".cart-item")).map(
-    (item) => {
-      const productName = item.dataset.productName;
-      const itemPriceElement = item.querySelector(".item-price"); // Sesuaikan dengan atribut yang digunakan pada elemen HTML
-      const quantityDisplayElement = item.querySelector(".quantity-display");
-
-      if (itemPriceElement && quantityDisplayElement) {
-        const itemPrice = parseFloat(
-          itemPriceElement.textContent.replace("Rp. ", "")
-        );
-        const quantity = parseInt(quantityDisplayElement.textContent);
-        return {
-          nama_barang: productName, // Sesuaikan dengan atribut yang diharapkan oleh server
-          harga: itemPrice, // Sesuaikan dengan atribut yang diharapkan oleh server
-          quantity,
-        };
-      } else {
-        return null;
-      }
-    }
-  );
-
-  console.log("Cart Items:", cartItems);
-
-  const validCartItems = cartItems.filter((item) => item !== null);
-  const token = localStorage.getItem("token");
-
-  console.log("Valid Cart Items:", validCartItems);
-
-  if (validCartItems.length === 0) {
-    alert(
-      "Keranjang belanja kosong. Tambahkan produk ke keranjang terlebih dahulu."
-    );
-    return;
-  }
-
-  const cartData = {
-    items: validCartItems,
-  };
-
-  fetch("http://be-jayapura-01-production.up.railway.app/checkout", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify(cartData),
-  })
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      return Promise.reject(response);
-    })
-    .then(function (data) {
-      alert(data.message);
-      document.querySelector(".cart-list").innerHTML = "";
-      document.querySelector(".total").textContent = "Rp. 0";
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
-
 // Open and Close Shopping Cart
 const shoppingCart = document.querySelector(".shopping img");
 const closeShoppingCart = document.querySelector(".closeShopping");
@@ -333,11 +264,51 @@ categoryOptions.forEach((option) => {
   });
 });
 
-// berpindah halaman ke checkout.html
+// Tambahkan item ke keranjang belanja
+cartItems.push({
+  name: itemName,
+});
+
+// Fungsi untuk mengirim keranjang belanja ke server
+function sendCartToServer(cartItems) {
+  const token = localStorage.getItem("token");
+
+  // Persiapkan data keranjang belanja yang akan dikirimkan ke server
+  const cartData = {
+    items: cartItems,
+  };
+
+  fetch("http://https://be-jayapura-01-production.up.railway.app//checkout", {
+    // Sesuaikan dengan endpoint Anda
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(cartData),
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      alert(data.message);
+      document.querySelector(".cart-list").innerHTML = "";
+      document.querySelector(".total").textContent = "Rp. 0";
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+// Fungsi untuk mengarahkan pengguna ke halaman checkout jika keranjang tidak kosong
 function redirectToPage() {
   if (cartQuantity > 0) {
+    sendCartToServer(cartItems); // Mengirim data keranjang belanja ke server
     window.location.href =
-      "http://be-jayapura-01-production.up.railway.app/static/checkout.html";
+      "https://be-jayapura-01-production.up.railway.app/checkout.html";
   } else {
     alert("Shopping cart is empty. Add items to the cart before checkout.");
   }
