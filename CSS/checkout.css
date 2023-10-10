@@ -84,7 +84,6 @@ h4 {
 
 .col-75 {
   -ms-flex: 75%;
-  /* IE10 */
   flex: 50%;
   margin-bottom: -20px;
   border-radius: 10px;
