@@ -73,7 +73,7 @@ form {
 /* Placeholder */
 .form-group input::placeholder {
     position: absolute;
-    left: 18px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--primary);
