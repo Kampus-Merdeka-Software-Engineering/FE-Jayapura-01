@@ -65,7 +65,7 @@ h4 {
   border-radius: 10px;
 }
 
-.col-50 {
+.col-payment {
   -ms-flex: 50%;
   /* IE10 */
   flex: 25%;
@@ -76,13 +76,13 @@ h4 {
   border-radius: 10px;
 }
 
-.col-50 h3 {
+.col-payment h3 {
   text-align: center;
   font-size: 23px;
   color: #1c6654;
 }
 
-.col-75 {
+.col-dataUser {
   -ms-flex: 75%;
   flex: 50%;
   margin-bottom: -20px;
@@ -90,8 +90,8 @@ h4 {
 }
 
 .col-25,
-.col-50,
-.col-75 {
+.col-payment,
+.col-dataUser {
   padding: 25px 20px;
 }
 
@@ -293,13 +293,13 @@ option {
     order: 1;
   }
 
-  .col-50 {
+  .col-payment {
     order: 2;
     width: 100%;
     padding-bottom: 20px;
   }
 
-  .col-75 {
+  .col-dataUser {
     order: 3;
     width: 100%;
   }
