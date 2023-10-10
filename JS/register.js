@@ -16,6 +16,12 @@ function register(event) {
   var emailValue = email.value;
   var passwordValue = password.value;
 
+  // Validasi form
+  if (!usernameValue || !emailValue || !passwordValue) {
+    alert("Please fill in all fields."); // Menampilkan pesan alert jika ada field yang kosong
+    return;
+  }
+
   // Mengeksekusi permintaan HTTP POST ke server untuk melakukan registrasi
   fetch("https://be-jayapura-01-production.up.railway.app/register", {
     method: "POST",
