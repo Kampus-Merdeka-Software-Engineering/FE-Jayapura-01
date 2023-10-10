@@ -191,7 +191,7 @@ document.querySelector(".menu-item").addEventListener("click", (event) => {
     //cek apakah user sudah login
     const token = localStorage.getItem("token");
     if (!token) {
-      alert("Silahkan login untuk aksi ini!");
+      alert("Please login before order ^-^");
       return;
     }
 
@@ -216,7 +216,7 @@ function redirectToPage() {
   if (cartQuantity > 0) {
     window.location.href = "checkout.html";
   } else {
-    alert("Shopping cart is empty. Add items to the cart before checkout.");
+    alert("Shopping cart is empty, add items to the cart before checkout ^-^");
   }
 }
 
