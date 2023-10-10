@@ -7,12 +7,6 @@ var password = document.getElementById("password");
 
 btn.addEventListener("click", login);
 
-// Validasi form
-if (!usernameValue || !passwordValue) {
-  alert("Please fill in all fields."); // Menampilkan pesan alert jika ada field yang kosong
-  return;
-}
-
 function login() {
   fetch("https://be-jayapura-01-production.up.railway.app/login", {
     method: "POST",
