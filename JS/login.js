@@ -5,9 +5,9 @@ var btn = document.getElementById("buttonLogin");
 var username = document.getElementById("username");
 var password = document.getElementById("password");
 
-btn.addEventListener("click", login);
+btn.addEventListener("click", function (event) {
+  event.preventDefault(); // Mencegah pengiriman formulir secara default dengan metode GET
 
-function login() {
   fetch("https://be-jayapura-01-production.up.railway.app/login", {
     method: "POST",
     headers: {
@@ -35,4 +35,4 @@ function login() {
     .catch(function (error) {
       console.log(error);
     });
-}
+});
