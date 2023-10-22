@@ -23,7 +23,7 @@ body {
 /* form */
 /* ===== */
 
-.icon-back a{
+.icon-back a {
     font-weight: 500;
     margin-top: 0;
     font-size: 30px;
@@ -64,14 +64,16 @@ form {
     margin-bottom: 20px;
     margin-right: 20px;
     color: var(--muda);
-    position: relative;
-    margin-bottom: 20px;
+}
+
+.redirect{
+    text-align: left;
 }
 
 /* Placeholder */
 .form-group input::placeholder {
     position: absolute;
-    left: 18px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--primary);

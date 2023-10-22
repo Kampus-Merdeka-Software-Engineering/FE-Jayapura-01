@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,9 @@
     <!-- icon fontawesome-->
     <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
 
-    <!-- Box icons -->
+    <!-- box icon -->
     <link rel="stylesheet" href="boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <!-- logo tab -->
     <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
@@ -29,41 +30,41 @@
 <body>
     <!-- Register -->
     <section class="login">
-
         <div class="icon-back">
             <a href="index.html"><i class="bx bx-arrow-back"></i></a>
         </div>
 
         <div class="sign-up">
-            <br>
             <div class="form-container">
-                <h2>REGISTER</h2> <br>
+                <h2>REGISTER</h2>
+                <form>
+                    <br> <br>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+                    </div>
 
                     <div class="form-group">
-                        <label for="username"><i class="fas fa-user"></i> Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="password"><i class="fas fa-lock"></i> Password </label>
+                        <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter your password" required>
                     </div>
-        
+
                     <br>
                     <input type="submit" value="Register" class="btn" id="buttonRegister">
 
                     <br> <br>
-                    <div class="redirect">
-                        <p>Already have account? <a href="login.html">Login</a></p>
-                    </div>
+                    <p class="redirect">Already have account? <a href="login.html">Login</a></p>
                 </form>
             </div>
         </div>
     </section>
+
+    <script src="JS/register.js"></script>
 </body>
+
 </html>
