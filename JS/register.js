@@ -23,7 +23,7 @@ function register(event) {
   }
 
   // Mengeksekusi permintaan HTTP POST ke server untuk melakukan registrasi
-  fetch("https://be-jayapura-01-production.up.railway.app/register", {
+  fetch("Ini diganti dengan link dari railway atau app sejenis./register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
