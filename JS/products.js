@@ -43,7 +43,7 @@ function showSlide(n) {
 // =============
 //fetching products from database
 // =============
-fetch("https://be-jayapura-01-production.up.railway.app/products")
+fetch("Ini diganti dengan link dari railway atau app sejenis./products")
   .then((response) => response.json())
   .then((data) => {
     // Loop melalui data produk dan tambahkan setiap produk ke dalam DOM

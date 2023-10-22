@@ -8,7 +8,7 @@ var password = document.getElementById("password");
 btn.addEventListener("click", function (event) {
   event.preventDefault(); // Mencegah pengiriman formulir secara default dengan metode GET
 
-  fetch("https://be-jayapura-01-production.up.railway.app/login", {
+  fetch("Ini diganti dengan link dari railway atau app sejenis./login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
